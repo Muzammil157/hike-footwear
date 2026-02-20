@@ -11,6 +11,42 @@
   "sections": {
     "shokutwa_lagoon_hero_DPrwiL": {
       "type": "shokutwa-lagoon-hero",
+      "blocks": {
+        "icon_block_RmatAX": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify://shop_images/9af28bc39f61c3b9759a5374ce3800bcdde7b82f-500x505.webp",
+            "text": "Breite Zehenbox"
+          }
+        },
+        "icon_block_geknCz": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify://shop_images/8f402f03335e8c345c608694c507620db88f9eec-500x505.webp",
+            "text": "Natürliche Ausrichtung"
+          }
+        },
+        "icon_block_ik4F6G": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify://shop_images/b28c4b705b204b8998e696de8b69a5dcf9026d34-500x500.webp",
+            "text": "Zero-Drop-Sohle"
+          }
+        },
+        "icon_block_qkHpW7": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify://shop_images/f96d74ae8e937711118d2fc1b48a279e3c51f526-500x500.webp",
+            "text": "Ultraflexibles Material"
+          }
+        }
+      },
+      "block_order": [
+        "icon_block_RmatAX",
+        "icon_block_geknCz",
+        "icon_block_ik4F6G",
+        "icon_block_qkHpW7"
+      ],
       "name": "Shokutwa Lagoon Hero",
       "settings": {
         "show_reviews": true,
