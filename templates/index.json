@@ -51,7 +51,7 @@
       "settings": {
         "show_reviews": true,
         "review_text": "4000+ Über 1.450.000 Leben verbessert",
-        "star_color": "#EBBF20",
+        "star_color": "#ebbf20",
         "review_text_color": "#000000",
         "heading": "Gesunde Barfußschuhe",
         "small_heading": "Ihr Weg zu schmerzfreiem Gehen",
@@ -61,9 +61,54 @@
         "button_link": "",
         "button_bg": "#343f20",
         "button_text": "#ffffff",
-        "background_color": "#F8FAF8",
+        "background_color": "#f8faf8",
         "padding_top": 60,
         "padding_bottom": 60
+      }
+    },
+    "nsh_logo_slider_MwTn7t": {
+      "type": "nsh-logo-slider",
+      "blocks": {
+        "logo_rj3kLw": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/032abb481b52fbb62d1610254c7b0532a9b21c5c-533x160.png"
+          }
+        },
+        "logo_Yc8HaV": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/d1c288781f36d5f5580ab9f140b58d3b51d4c4ae-533x160.png"
+          }
+        },
+        "logo_TizW4P": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/91d0a75b3f0b3527a5fdb7f524afb018c46dabc2-533x160.png"
+          }
+        },
+        "logo_KKcjzT": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/9ababcdd9f03fc168a8c10fe6a8f78bf0f01f9b1-1500x550.webp"
+          }
+        }
+      },
+      "block_order": [
+        "logo_rj3kLw",
+        "logo_Yc8HaV",
+        "logo_TizW4P",
+        "logo_KKcjzT"
+      ],
+      "name": "NSH Logo Slider",
+      "settings": {
+        "bg_color": "#f8f8f8",
+        "logo_width": 140,
+        "logo_width_mobile": 100,
+        "logo_gap": 40,
+        "speed": 20,
+        "padding_vertical": 40,
+        "padding_vertical_mobile": 30
       }
     },
     "image_banner": {
@@ -136,6 +181,7 @@
   },
   "order": [
     "shokutwa_lagoon_hero_DPrwiL",
+    "nsh_logo_slider_MwTn7t",
     "image_banner",
     "featured_collection"
   ]
