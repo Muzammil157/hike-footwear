@@ -1,5 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "shokutwa_lagoon_hero_DPrwiL": {
+      "type": "shokutwa-lagoon-hero",
+      "name": "Shokutwa Lagoon Hero",
+      "settings": {
+        "show_reviews": true,
+        "review_text": "4000+ Lives Improved",
+        "star_color": "#EBBF20",
+        "review_text_color": "#000000",
+        "heading": "Healthy Barefoot Shoes",
+        "small_heading": "Healthy Barefoot Shoes",
+        "subheading": "Your path to pain-free walking",
+        "banner_image": "shopify://shop_images/b7bc75360d4fd8adf16c0a3f144dfebb8fee91d8-2922x1763.webp",
+        "button_label": "Shop Clearance Sale →",
+        "button_link": "",
+        "button_bg": "#343f20",
+        "button_text": "#ffffff",
+        "background_color": "#F8FAF8",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -29,33 +59,32 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -63,12 +92,14 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "shokutwa_lagoon_hero_DPrwiL",
     "image_banner",
     "featured_collection"
   ]
