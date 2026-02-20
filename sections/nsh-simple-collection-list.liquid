@@ -1,0 +1,198 @@
+{% comment %}
+NSH Simple Collection List
+{% endcomment %}
+
+<section class="nsh-collection-list">
+  <div class="page-width">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="nsh-collection-heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="nsh-collection-grid">
+      {% for block in section.blocks %}
+        {% assign collection = collections[block.settings.collection] %}
+        
+        {% if collection != blank %}
+          <div class="nsh-collection-item" {{ block.shopify_attributes }}>
+
+            <a href="{{ collection.url }}" class="nsh-collection-link">
+
+              <div class="nsh-collection-image">
+                {% if block.settings.custom_image != blank %}
+                  <img
+                    src="{{ block.settings.custom_image | image_url: width: 800 }}"
+                    alt="{{ block.settings.custom_image.alt | escape }}"
+                    loading="lazy"
+                  >
+                {% elsif collection.featured_image != blank %}
+                  <img
+                    src="{{ collection.featured_image | image_url: width: 800 }}"
+                    alt="{{ collection.title | escape }}"
+                    loading="lazy"
+                  >
+                {% endif %}
+              </div>
+
+              <h3 class="nsh-collection-title">
+                {{ collection.title }}
+              </h3>
+
+            </a>
+
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.nsh-collection-list {
+  padding: {{ section.settings.padding_vertical }}px 0;
+}
+
+.nsh-collection-heading {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.nsh-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: {{ section.settings.grid_gap }}px;
+}
+
+.nsh-collection-item {
+  text-align: center;
+}
+
+.nsh-collection-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nsh-collection-image {
+  overflow: hidden;
+  border-radius: {{ section.settings.image_radius }}px;
+}
+
+.nsh-collection-image img {
+  width: 100%;
+  height: {{ section.settings.image_height }}px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.nsh-collection-item:hover img {
+  transform: scale(1.05);
+}
+
+.nsh-collection-title {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .nsh-collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .nsh-collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nsh-collection-heading {
+    margin-bottom: 25px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Simple Collection List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Shop By Collection"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Image Height",
+      "min": 150,
+      "max": 500,
+      "step": 25,
+      "default": 250
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid Gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical Padding",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image (Optional)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Simple Collection List",
+      "blocks": [
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}
