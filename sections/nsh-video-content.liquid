@@ -1,0 +1,299 @@
+{% comment %}
+NSH Video + Content Section
+{% endcomment %}
+
+<section class="nsh-video-content" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nsh-video-content-wrapper">
+
+      <!-- LEFT SIDE - VIDEO -->
+      <div class="nsh-video-col nsh-video">
+        {% if section.settings.video_url != blank %}
+          <div class="nsh-video-container">
+            {{
+              section.settings.video_url
+              | video_tag:
+                autoplay: section.settings.autoplay,
+                loop: section.settings.loop,
+                muted: true,
+                controls: section.settings.show_controls
+            }}
+          </div>
+        {% elsif section.settings.video_file != blank %}
+          <div class="nsh-video-container">
+            {{
+              section.settings.video_file
+              | video_tag:
+                autoplay: section.settings.autoplay,
+                loop: section.settings.loop,
+                muted: true,
+                controls: section.settings.show_controls
+            }}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- RIGHT SIDE - CONTENT -->
+      <div class="nsh-video-col nsh-content">
+
+        {% if section.settings.heading != blank %}
+          <h2 class="nsh-heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <div class="nsh-subheading">
+            {{ section.settings.subheading }}
+          </div>
+        {% endif %}
+
+        <div class="nsh-feature-blocks">
+          {% for block in section.blocks %}
+            <div class="nsh-feature-item" {{ block.shopify_attributes }}>
+              
+              {% if block.settings.image != blank %}
+                <div class="nsh-feature-image">
+                  <img 
+                    src="{{ block.settings.image | image_url: width: 200 }}" 
+                    alt="{{ block.settings.image.alt | escape }}"
+                    loading="lazy"
+                  >
+                </div>
+              {% endif %}
+
+              <div class="nsh-feature-text">
+                {% if block.settings.title != blank %}
+                  <h4 class="nsh-feature-title">
+                    {{ block.settings.title }}
+                  </h4>
+                {% endif %}
+
+                {% if block.settings.text != blank %}
+                  <div class="nsh-feature-subtext">
+                    {{ block.settings.text }}
+                  </div>
+                {% endif %}
+              </div>
+
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.nsh-video-content {
+  padding: {{ section.settings.padding_vertical }}px 0;
+}
+
+.nsh-video-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.nsh-video-col {
+  flex: 1;
+}
+
+/* VIDEO */
+.nsh-video-container video,
+.nsh-video-container iframe {
+  width: 100%;
+  height: auto;
+  border-radius: {{ section.settings.border_radius }}px;
+}
+
+/* CONTENT */
+.nsh-heading {
+  margin-bottom: 15px;
+}
+
+.nsh-subheading {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.nsh-feature-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nsh-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.nsh-feature-image img {
+  width: {{ section.settings.icon_size }}px;
+  height: auto;
+}
+
+.nsh-feature-title {
+  margin: 0 0 5px;
+}
+
+.nsh-feature-subtext {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .nsh-video-content-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .nsh-video {
+    order: 1;
+  }
+
+  .nsh-content {
+    order: 2;
+  }
+
+  .nsh-video-content {
+    padding: {{ section.settings.padding_vertical_mobile }}px 0;
+  }
+
+  .nsh-feature-item {
+    align-items: center;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "NSH Video + Content",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Why Choose Our Barefoot Shoes"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Experience natural movement and pain-free walking."
+    },
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Upload Video"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "Or Video URL",
+      "accept": ["youtube", "vimeo"]
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop Video",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Show Video Controls",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon Size",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Video Border Radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical Padding (Desktop)",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical_mobile",
+      "label": "Vertical Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Small Heading",
+          "default": "Natural Foot Alignment"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Subheading Text",
+          "default": "Encourages proper posture and reduces foot pain."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "NSH Video + Content",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}
