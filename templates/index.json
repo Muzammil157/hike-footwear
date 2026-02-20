@@ -138,11 +138,69 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "nsh_video_content_BQX4D6": {
+      "type": "nsh-video-content",
+      "blocks": {
+        "feature_Uh9QNM": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/9af28bc39f61c3b9759a5374ce3800bcdde7b82f-500x505.webp",
+            "title": "Breite Zehenbox",
+            "text": "Gibt Ihren Zehen Platz, sich in ihrer natürlichen Position zu entspannen"
+          }
+        },
+        "feature_eg6wcn": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/1ab55d9560472f1adc8fc9db877e15800b4115f4-600x600.webp",
+            "title": "Dünne Sohlen",
+            "text": "Sorgt mit ultradünnen Sohlen für ein natürliches Barfußgefühl"
+          }
+        },
+        "feature_x967wK": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/7a0d335397a070de455f8478b2125fd508e6306b-600x600.webp",
+            "title": "Stärkt die Fußmuskulatur",
+            "text": "Erleben Sie natürlichen Komfort und Halt – entwickelt, um Beschwerden vorzubeugen"
+          }
+        },
+        "feature_DCh8ra": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/e419860e3582c6637ed600d7d417bbd814bc1a2a-600x600.webp",
+            "title": "Stärkt die Fußmuskulatur",
+            "text": "Unterstützt die Aktivierung der Fußmuskulatur für bessere Balance und Stabilität"
+          }
+        }
+      },
+      "block_order": [
+        "feature_Uh9QNM",
+        "feature_eg6wcn",
+        "feature_x967wK",
+        "feature_DCh8ra"
+      ],
+      "name": "NSH Video + Content",
+      "settings": {
+        "bg_color": "#ffffff",
+        "heading": "Erleben Sie ultimativen Fußkomfort mit HIKE!",
+        "subheading": "Bei Hike Footwear ist unsere Mission persönlich: Wir möchten das Wohlbefinden Ihrer Füße unterstützen und Beschwerden reduzieren. Unsere hochwertigen, stützenden Schuhe fördern eine natürliche Fußausrichtung und ganztägigen Komfort.",
+        "video_file": "shopify://files/videos/file_example_MP4_480_1_5MG (2).mp4",
+        "autoplay": true,
+        "loop": true,
+        "show_controls": false,
+        "icon_size": 40,
+        "border_radius": 12,
+        "padding_vertical": 80,
+        "padding_vertical_mobile": 50
+      }
     }
   },
   "order": [
     "shokutwa_lagoon_hero_DPrwiL",
     "nsh_logo_slider_MwTn7t",
-    "featured_collection"
+    "featured_collection",
+    "nsh_video_content_BQX4D6"
   ]
 }
