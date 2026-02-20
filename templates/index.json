@@ -196,12 +196,23 @@
         "padding_vertical": 80,
         "padding_vertical_mobile": 50
       }
+    },
+    "nsh_two_image_split_cJeqBf": {
+      "type": "nsh-two-image-split",
+      "name": "NSH Two Image Split",
+      "settings": {
+        "left_image": "shopify://shop_images/3ffaf8c30f195f165f5e375341fe70790c10a766-3375x3375.webp",
+        "right_image": "shopify://shop_images/bb2f838bf2d7f5a2954f0a9b9ee8bc332f5108f3-3566x3566-ezgif.com-avif-to-webp-converter.webp",
+        "section_height": 500,
+        "mobile_height": 400
+      }
     }
   },
   "order": [
     "shokutwa_lagoon_hero_DPrwiL",
     "nsh_logo_slider_MwTn7t",
     "featured_collection",
-    "nsh_video_content_BQX4D6"
+    "nsh_video_content_BQX4D6",
+    "nsh_two_image_split_cJeqBf"
   ]
 }
