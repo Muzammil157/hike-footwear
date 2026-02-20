@@ -206,6 +206,49 @@
         "section_height": 750,
         "mobile_height": 400
       }
+    },
+    "nsh_simple_collection_list_rHnykV": {
+      "type": "nsh-simple-collection-list",
+      "blocks": {
+        "collection_block_BrmcXr": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "automated-collection"
+          }
+        },
+        "collection_block_mttWrf": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "hydrogen"
+          }
+        },
+        "collection_block_VwAUBV": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "automated-collection"
+          }
+        },
+        "collection_block_FJ8iKX": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "hydrogen"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_BrmcXr",
+        "collection_block_mttWrf",
+        "collection_block_VwAUBV",
+        "collection_block_FJ8iKX"
+      ],
+      "name": "Simple Collection List",
+      "settings": {
+        "heading": "Shop By Collection",
+        "image_height": 250,
+        "grid_gap": 30,
+        "image_radius": 10,
+        "padding_vertical": 80
+      }
     }
   },
   "order": [
@@ -213,6 +256,7 @@
     "nsh_logo_slider_MwTn7t",
     "featured_collection",
     "nsh_video_content_BQX4D6",
-    "nsh_two_image_split_cJeqBf"
+    "nsh_two_image_split_cJeqBf",
+    "nsh_simple_collection_list_rHnykV"
   ]
 }
