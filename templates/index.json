@@ -330,11 +330,64 @@
       "name": "Background Content Box",
       "settings": {
         "bg_image": "shopify://shop_images/bd415aa4b5770c5f4e9f0544c2be63c6ebc3170a-3168x1344.webp",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0.4,
         "content_alignment": "left",
         "heading": "Wir setzen auf ein gesünderes Fußklima",
+        "heading_color": "#ffffff",
         "text": "",
+        "text_color": "#ffffff",
         "button_label": "BESTSELLER SHOPPEN",
-        "button_link": ""
+        "button_link": "",
+        "button_text_color": "#000000",
+        "button_bg_color": "#ffffff",
+        "button_border_color": "#ffffff"
+      }
+    },
+    "product_comparison_table_dAKFhN": {
+      "type": "product-comparison-table",
+      "blocks": {
+        "product_column_PCr3er": {
+          "type": "product_column",
+          "settings": {
+            "product_image": "shopify://shop_images/bb2f838bf2d7f5a2954f0a9b9ee8bc332f5108f3-3566x3566-ezgif.com-avif-to-webp-converter.webp",
+            "product_title": "HF-Cloud Barefoot",
+            "product_link": "#"
+          }
+        },
+        "product_column_L3PCak": {
+          "type": "product_column",
+          "settings": {
+            "product_title": "",
+            "product_link": ""
+          }
+        },
+        "product_column_twDaLx": {
+          "type": "product_column",
+          "settings": {
+            "product_title": "",
+            "product_link": ""
+          }
+        },
+        "row_8zxzR8": {
+          "type": "row",
+          "settings": {
+            "row_heading": "Comfort",
+            "product_1_bars": 5,
+            "product_2_bars": 3,
+            "product_3_bars": 4
+          }
+        }
+      },
+      "block_order": [
+        "product_column_PCr3er",
+        "product_column_L3PCak",
+        "product_column_twDaLx",
+        "row_8zxzR8"
+      ],
+      "name": "Product Comparison Table",
+      "settings": {
+        "subheading": "Finden Sie Ihre perfekte Passform"
       }
     }
   },
@@ -347,6 +400,7 @@
     "nsh_simple_collection_list_rHnykV",
     "testimonials_satisfied_QPGJTy",
     "rating_cards_row_f6AhCi",
-    "background_content_box_RWFdYL"
+    "background_content_box_RWFdYL",
+    "product_comparison_table_dAKFhN"
   ]
 }
