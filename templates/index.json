@@ -324,6 +324,18 @@
         "heading_max_width": 600,
         "card_radius": 6
       }
+    },
+    "background_content_box_RWFdYL": {
+      "type": "background-content-box",
+      "name": "Background Content Box",
+      "settings": {
+        "bg_image": "shopify://shop_images/bd415aa4b5770c5f4e9f0544c2be63c6ebc3170a-3168x1344.webp",
+        "content_alignment": "left",
+        "heading": "Wir setzen auf ein gesünderes Fußklima",
+        "text": "",
+        "button_label": "BESTSELLER SHOPPEN",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -334,6 +346,7 @@
     "nsh_two_image_split_cJeqBf",
     "nsh_simple_collection_list_rHnykV",
     "testimonials_satisfied_QPGJTy",
-    "rating_cards_row_f6AhCi"
+    "rating_cards_row_f6AhCi",
+    "background_content_box_RWFdYL"
   ]
 }
