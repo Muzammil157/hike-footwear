@@ -1,0 +1,143 @@
+<section 
+  class="bg-content-section alignment-{{ section.settings.content_alignment }}"
+  style="
+    background-image: url({{ section.settings.bg_image | image_url: width: 2000 }});
+  "
+>
+  <div class="bg-content-wrapper">
+    <div class="bg-content-box">
+
+      {% if section.settings.heading != blank %}
+        <h2 class="bg-heading">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+        <div class="bg-text">
+          {{ section.settings.text }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_link }}" class="bg-button">
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Reset everything inside section */
+.bg-content-section,
+.bg-content-section * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section base */
+.bg-content-section {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Wrapper */
+.bg-content-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+/* Alignment Options */
+.alignment-left .bg-content-wrapper {
+  justify-content: flex-start;
+}
+
+.alignment-center .bg-content-wrapper {
+  justify-content: center;
+}
+
+.alignment-right .bg-content-wrapper {
+  justify-content: flex-end;
+}
+
+/* Content Box */
+.bg-content-box {
+  max-width: 500px;
+  padding: 40px;
+}
+
+/* Heading */
+.bg-heading {
+  margin-bottom: 15px;
+}
+
+/* Text */
+.bg-text {
+  margin-bottom: 20px;
+}
+
+/* Button */
+.bg-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #000;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Background Content Box",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your Heading Here"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Add your content text here."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Background Content Box"
+    }
+  ]
+}
+{% endschema %}
