@@ -249,6 +249,50 @@
         "image_radius": 10,
         "padding_vertical": 80
       }
+    },
+    "testimonials_satisfied_QPGJTy": {
+      "type": "testimonials-satisfied",
+      "blocks": {
+        "testimonial_nUzLym": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "review_text": "\"Ich habe die Ridge Plus Hiking Shoes auf steinigen Trails, Waldwegen und bei langen Tageswanderungen getragen, und sie waren durchgehend unglaublich bequem.\nDie breite Zehenbox ermöglicht es meinen Füßen, sich natürlich zu bewegen, ohne eingeengt zu sein. Ich fühle mich auf unebenem Gelände stabil und sicher, selbst beim Abstieg. Ehrlich gesagt fühlt es sich an, als würde man wandern, ohne gegen seine eigenen Füße anzukämpfen.\"",
+            "reviewer_image": "shopify://shop_images/9d11cc0fbc2460549dc56b8784f5e304e22127a6-818x1324_1.webp",
+            "reviewer_name": "Dina B. <br> New York",
+            "product": "the-3p-fulfilled-snowboard"
+          }
+        },
+        "testimonial_9tYaw7": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 4,
+            "review_text": "\"Diese Schuhe lassen sich anziehen, ohne sich bücken zu müssen – perfekt für meinen empfindlichen Rücken.\n\nDas Gehen fühlt sich unglaublich natürlich und leicht an. Das Slip-on-Design ist ideal für hektische Morgen, und die breite Zehenbox macht bei meinen Ballenzehen einen spürbaren Unterschied.\"",
+            "reviewer_image": "shopify://shop_images/749c65dfe8b7b9e7e29d5f21337626cebbb06b98-608x1080.webp",
+            "reviewer_name": "Eric L.  Ohio",
+            "product": "the-multi-location-snowboard"
+          }
+        },
+        "testimonial_nUxeyx": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 4,
+            "review_text": "\"Ich persönlich leide unter Neuropathie in meinen Füßen und Beinen, und diese Schuhe sind perfekt für meine Beschwerden. Sie sind speziell für Menschen mit Fußproblemen konzipiert. Ich kann sie den ganzen Tag tragen und nehme sie abends nur ungern aus. Ich liebe es, wie sie meine Füße „umschließen“ und wie sie aussehen. Die breite Zehenbox ist ein wahrer Segen.\"",
+            "reviewer_image": "shopify://shop_images/c271906e68d08a198bdf0b8688468c6f56f88b78-669x1080.webp",
+            "reviewer_name": "Erin B.  Miami",
+            "product": "the-videographer-snowboard"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_nUzLym",
+        "testimonial_9tYaw7",
+        "testimonial_nUxeyx"
+      ],
+      "name": "Satisfied Testimonials",
+      "settings": {
+        "heading": "Sehen Sie, warum unsere Kunden so zufrieden sind..."
+      }
     }
   },
   "order": [
@@ -257,6 +301,7 @@
     "featured_collection",
     "nsh_video_content_BQX4D6",
     "nsh_two_image_split_cJeqBf",
-    "nsh_simple_collection_list_rHnykV"
+    "nsh_simple_collection_list_rHnykV",
+    "testimonials_satisfied_QPGJTy"
   ]
 }
