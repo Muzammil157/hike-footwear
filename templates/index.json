@@ -293,6 +293,37 @@
       "settings": {
         "heading": "Sehen Sie, warum unsere Kunden so zufrieden sind..."
       }
+    },
+    "rating_cards_row_f6AhCi": {
+      "type": "rating-cards-row",
+      "blocks": {
+        "card_Xy379A": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/fa276ee47eeef9bb23a62f61ee2e9301a145f9f3-560x118.webp",
+            "rating_text": "Bewertung: 4,6",
+            "rating": 5
+          }
+        },
+        "card_yYwhn4": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/96428473af934753f1f888b5a50ca0a12a7309d5-560x118.webp",
+            "rating_text": "Bewertung: 4,8",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "card_Xy379A",
+        "card_yYwhn4"
+      ],
+      "name": "Rating Cards Row",
+      "settings": {
+        "heading": "Wir verbessern das Leben von über 1.450.000 Menschen durch den Fokus auf Fußgesundheit mit HIKE Footwear!",
+        "heading_max_width": 400,
+        "card_radius": 6
+      }
     }
   },
   "order": [
@@ -302,6 +333,7 @@
     "nsh_video_content_BQX4D6",
     "nsh_two_image_split_cJeqBf",
     "nsh_simple_collection_list_rHnykV",
-    "testimonials_satisfied_QPGJTy"
+    "testimonials_satisfied_QPGJTy",
+    "rating_cards_row_f6AhCi"
   ]
 }
