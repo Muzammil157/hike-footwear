@@ -1,19 +1,26 @@
-<section 
-  class="bg-content-section alignment-{{ section.settings.content_alignment }}"
-  style="
-    background-image: url({{ section.settings.bg_image | image_url: width: 2000 }});
-  "
->
+<section class="bg-content-section alignment-{{ section.settings.content_alignment }}">
+
+  <!-- Background Image -->
+  {% if section.settings.bg_image != blank %}
+    <div class="bg-image-wrapper">
+      <img
+        src="{{ section.settings.bg_image | image_url: width: 2000 }}"
+        alt="Background Image"
+        class="bg-image"
+      >
+    </div>
+  {% endif %}
+
   <!-- Overlay -->
   <div 
     class="bg-overlay"
     style="
       background-color: {{ section.settings.overlay_color }};
       opacity: {{ section.settings.overlay_opacity }};
-      display: block;
     "
   ></div>
 
+  <!-- Content -->
   <div class="bg-content-wrapper">
     <div class="bg-content-box">
 
@@ -51,10 +58,11 @@
 
     </div>
   </div>
+
 </section>
 
 <style>
-/* Reset */
+/* Reset Everything Inside Section */
 .bg-content-section,
 .bg-content-section * {
   margin: 0;
@@ -66,27 +74,39 @@
 .bg-content-section {
   width: 100%;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Background Image */
+.bg-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Overlay */
 .bg-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Wrapper */
+/* Content Wrapper */
 .bg-content-wrapper {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   width: 100%;
 }
 
-/* Alignment */
+/* Alignment Options */
 .alignment-left .bg-content-wrapper {
   justify-content: flex-start;
 }
@@ -105,17 +125,15 @@
   padding: 40px;
 }
 
-/* Heading */
+/* Spacing */
 .bg-heading {
   margin-bottom: 15px;
 }
 
-/* Text */
 .bg-text {
   margin-bottom: 20px;
 }
 
-/* Button */
 .bg-button {
   display: inline-block;
   text-decoration: none;
