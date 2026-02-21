@@ -4,23 +4,46 @@
     background-image: url({{ section.settings.bg_image | image_url: width: 2000 }});
   "
 >
+  <!-- Overlay -->
+  <div 
+    class="bg-overlay"
+    style="
+      background-color: {{ section.settings.overlay_color }};
+      opacity: {{ section.settings.overlay_opacity }};
+    "
+  ></div>
+
   <div class="bg-content-wrapper">
     <div class="bg-content-box">
 
       {% if section.settings.heading != blank %}
-        <h2 class="bg-heading">
+        <h2 
+          class="bg-heading"
+          style="color: {{ section.settings.heading_color }};"
+        >
           {{ section.settings.heading }}
         </h2>
       {% endif %}
 
       {% if section.settings.text != blank %}
-        <div class="bg-text">
+        <div 
+          class="bg-text"
+          style="color: {{ section.settings.text_color }};"
+        >
           {{ section.settings.text }}
         </div>
       {% endif %}
 
       {% if section.settings.button_label != blank %}
-        <a href="{{ section.settings.button_link }}" class="bg-button">
+        <a 
+          href="{{ section.settings.button_link }}" 
+          class="bg-button"
+          style="
+            color: {{ section.settings.button_text_color }};
+            background-color: {{ section.settings.button_bg_color }};
+            border: 1px solid {{ section.settings.button_border_color }};
+          "
+        >
           {{ section.settings.button_label }}
         </a>
       {% endif %}
@@ -30,7 +53,7 @@
 </section>
 
 <style>
-/* Reset everything inside section */
+/* Reset */
 .bg-content-section,
 .bg-content-section * {
   margin: 0;
@@ -38,21 +61,31 @@
   box-sizing: border-box;
 }
 
-/* Section base */
+/* Section Base */
 .bg-content-section {
   width: 100%;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* Overlay */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 /* Wrapper */
 .bg-content-wrapper {
+  position: relative;
+  z-index: 2;
   display: flex;
   width: 100%;
 }
 
-/* Alignment Options */
+/* Alignment */
 .alignment-left .bg-content-wrapper {
   justify-content: flex-start;
 }
@@ -86,7 +119,6 @@
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  border: 1px solid #000;
 }
 </style>
 
@@ -98,6 +130,21 @@
       "type": "image_picker",
       "id": "bg_image",
       "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.4
     },
     {
       "type": "select",
@@ -117,10 +164,22 @@
       "default": "Your Heading Here"
     },
     {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#ffffff"
+    },
+    {
       "type": "textarea",
       "id": "text",
       "label": "Text",
       "default": "Add your content text here."
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
     },
     {
       "type": "text",
@@ -132,6 +191,24 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button Border Color",
+      "default": "#ffffff"
     }
   ],
   "presets": [
