@@ -321,7 +321,7 @@
       "name": "Rating Cards Row",
       "settings": {
         "heading": "Wir verbessern das Leben von über 1.450.000 Menschen durch den Fokus auf Fußgesundheit mit HIKE Footwear!",
-        "heading_max_width": 400,
+        "heading_max_width": 600,
         "card_radius": 6
       }
     }
