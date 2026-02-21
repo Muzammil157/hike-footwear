@@ -1,0 +1,240 @@
+<section class="satisfied-testimonials">
+  <div class="page-width">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="testimonial-heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="testimonial-grid">
+      {% for block in section.blocks %}
+        <div class="testimonial-card" {{ block.shopify_attributes }}>
+
+          <!-- Stars -->
+          <div class="testimonial-stars">
+            {% for i in (1..block.settings.rating) %}
+              ★
+            {% endfor %}
+          </div>
+
+          <!-- Review Text -->
+          {% if block.settings.review_text != blank %}
+            <div class="testimonial-text">
+              {{ block.settings.review_text }}
+            </div>
+          {% endif %}
+
+          <!-- Reviewer Info -->
+          <div class="reviewer-info">
+            {% if block.settings.reviewer_image != blank %}
+              <img 
+                src="{{ block.settings.reviewer_image | image_url: width: 100 }}" 
+                alt="{{ block.settings.reviewer_name }}"
+                class="reviewer-image"
+              >
+            {% endif %}
+
+            {% if block.settings.reviewer_name != blank %}
+              <div class="reviewer-name">
+                {{ block.settings.reviewer_name }}
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Separator -->
+          <hr class="testimonial-separator">
+
+          <!-- Product Info -->
+          {% assign product = block.settings.product %}
+          {% if product != blank %}
+            <div class="testimonial-product">
+
+              <div class="product-image">
+                <img 
+                  src="{{ product.featured_image | image_url: width: 150 }}" 
+                  alt="{{ product.title }}"
+                >
+              </div>
+
+              <div class="product-info">
+                <div class="product-title">
+                  {{ product.title }}
+                </div>
+
+                <div class="product-pricing">
+                  <span class="product-price">
+                    {{ product.price | money }}
+                  </span>
+
+                  {% if product.compare_at_price > product.price %}
+                    <span class="product-compare">
+                      {{ product.compare_at_price | money }}
+                    </span>
+                  {% endif %}
+                </div>
+              </div>
+
+            </div>
+          {% endif %}
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.satisfied-testimonials {
+  padding: 60px 0;
+}
+
+.testimonial-heading {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  padding: 25px;
+  border: 1px solid #eee;
+}
+
+.testimonial-stars {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.reviewer-image {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.reviewer-name {
+  font-weight: 600;
+}
+
+.testimonial-separator {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.testimonial-product {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 15px gap as requested */
+  text-align: left;
+}
+
+.product-image img {
+  width: 70px;
+  height: auto;
+}
+
+.product-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.product-pricing {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.product-compare {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Responsive */
+@media screen and (max-width: 990px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Satisfied Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "See why our customers are so satisfied"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Star Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "reviewer_image",
+          "label": "Reviewer Image"
+        },
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Reviewed Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Satisfied Testimonials",
+      "blocks": [
+        { "type": "testimonial" },
+        { "type": "testimonial" },
+        { "type": "testimonial" }
+      ]
+    }
+  ]
+}
+{% endschema %}
