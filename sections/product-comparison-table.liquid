@@ -1,0 +1,291 @@
+<section class="comparison-table-section">
+  <div class="page-width">
+
+    <!-- Subheading -->
+    {% if section.settings.subheading != blank %}
+      <div class="comparison-subheading">
+        {{ section.settings.subheading }}
+      </div>
+    {% endif %}
+
+    <!-- Product Header Images -->
+    <div class="comparison-products-header">
+      {% for block in section.blocks %}
+        {% if block.type == 'product_column' %}
+          <div class="comparison-product-column">
+            {% if block.settings.product_image != blank %}
+              <img src="{{ block.settings.product_image | image_url: width: 300 }}" alt="{{ block.settings.product_title }}" class="product-image">
+            {% endif %}
+            {% if block.settings.product_title != blank %}
+              <div class="product-title">
+                {{ block.settings.product_title }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Rows -->
+    <div class="comparison-rows-wrapper">
+      {% for row in section.blocks %}
+        {% if row.type == 'row' %}
+          <div class="comparison-row">
+
+            <!-- Row Heading -->
+            <div class="row-heading">
+              {{ row.settings.row_heading }}
+            </div>
+
+            <!-- Product 1 Bars -->
+            {% if row.settings.product_1_bars != blank %}
+              <div class="row-bars">
+                {% for i in (1..5) %}
+                  <span class="bar {% if i <= row.settings.product_1_bars %}filled{% endif %}"></span>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            <!-- Product 2 Bars -->
+            {% if row.settings.product_2_bars != blank %}
+              <div class="row-bars">
+                {% for i in (1..5) %}
+                  <span class="bar {% if i <= row.settings.product_2_bars %}filled{% endif %}"></span>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            <!-- Product 3 Bars -->
+            {% if row.settings.product_3_bars != blank %}
+              <div class="row-bars">
+                {% for i in (1..5) %}
+                  <span class="bar {% if i <= row.settings.product_3_bars %}filled{% endif %}"></span>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Product Links -->
+    <div class="comparison-product-links">
+      {% for block in section.blocks %}
+        {% if block.type == 'product_column' %}
+          <div class="product-link">
+            {% if block.settings.product_link != blank %}
+              <a href="{{ block.settings.product_link }}">Learn More</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Reset */
+.comparison-table-section,
+.comparison-table-section * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Base */
+.comparison-table-section {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Subheading */
+.comparison-subheading {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Product Header Images */
+.comparison-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.comparison-product-column {
+  flex: 1;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+.product-title {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Rows */
+.comparison-rows-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.comparison-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.row-heading {
+  flex: 1;
+  font-weight: 500;
+  padding-right: 10px;
+}
+
+/* Bars */
+.row-bars {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.bar {
+  width: 18px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.bar.filled {
+  background-color: #4CAF50;
+}
+
+/* Product Links */
+.comparison-product-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.product-link {
+  flex: 1;
+  text-align: center;
+}
+
+.product-link a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Mobile */
+@media screen and (max-width: 749px) {
+  .comparison-rows-wrapper {
+    display: block;
+    overflow-x: auto;
+  }
+  .comparison-row {
+    display: flex;
+    min-width: 600px; /* scrollable horizontally */
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Product Comparison Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Compare Our Products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_column",
+      "name": "Product Column",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "product_title",
+          "label": "Product Title"
+        },
+        {
+          "type": "url",
+          "id": "product_link",
+          "label": "Product Page Link"
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "row_heading",
+          "label": "Row Heading",
+          "default": "Comfort"
+        },
+        {
+          "type": "range",
+          "id": "product_1_bars",
+          "label": "Product 1 Bars",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "range",
+          "id": "product_2_bars",
+          "label": "Product 2 Bars",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "product_3_bars",
+          "label": "Product 3 Bars",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 4
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Comparison Table",
+      "blocks": [
+        { "type": "product_column" },
+        { "type": "product_column" },
+        { "type": "product_column" },
+        { "type": "row" }
+      ]
+    }
+  ]
+}
+{% endschema %}
