@@ -61,7 +61,7 @@
         "button_link": "",
         "button_bg": "#343f20",
         "button_text": "#ffffff",
-        "background_color": "#f8faf8",
+        "background_color": "rgba(0,0,0,0)",
         "padding_top": 60,
         "padding_bottom": 60
       }
