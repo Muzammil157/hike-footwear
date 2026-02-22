@@ -62,8 +62,8 @@
         "button_bg": "#343f20",
         "button_text": "#ffffff",
         "background_color": "rgba(0,0,0,0)",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 15,
+        "padding_bottom": 25
       }
     },
     "nsh_logo_slider_MwTn7t": {
