@@ -1,0 +1,192 @@
+{% assign current_product = product %}
+
+{% if current_product != blank %}
+<div class="snipot-card">
+
+  <!-- Info Icon -->
+  <a href="{{ current_product.url }}" class="snipot-info-icon">
+    i
+  </a>
+
+  <!-- Product Image -->
+  <div class="snipot-image">
+    <a href="{{ current_product.url }}">
+      <img 
+        src="{{ current_product.featured_image | image_url: width: 600 }}" 
+        alt="{{ current_product.title }}"
+        loading="lazy"
+      >
+    </a>
+
+    <!-- Sale Badge -->
+    {% if current_product.compare_at_price > current_product.price %}
+      {% assign discount = current_product.compare_at_price | minus: current_product.price %}
+      {% assign discount_percent = discount | times: 100 | divided_by: current_product.compare_at_price %}
+      <div class="snipot-badge">
+        -{{ discount_percent }}%
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Content -->
+  <div class="snipot-content">
+
+    <!-- Rating -->
+    <div class="snipot-rating">
+      <div class="snipot-stars">
+        {% assign rating_value = 4 %}
+        {% for i in (1..5) %}
+          <span class="star {% if i <= rating_value %}filled{% endif %}">★</span>
+        {% endfor %}
+      </div>
+
+      <div class="snipot-review-count">
+        {{ rating_value }}/5 ({{ 2000 | minus: 537 }} reviews)
+      </div>
+    </div>
+
+    <!-- Review Text -->
+    <div class="snipot-review-text">
+      Excellent product quality
+    </div>
+
+    <!-- Product Title -->
+    <div class="snipot-title">
+      <a href="{{ current_product.url }}">
+        {{ current_product.title }}
+      </a>
+    </div>
+
+    <!-- Pricing -->
+    <div class="snipot-pricing">
+      <span class="snipot-price">
+        {{ current_product.price | money }}
+      </span>
+
+      {% if current_product.compare_at_price > current_product.price %}
+        <span class="snipot-compare">
+          {{ current_product.compare_at_price | money }}
+        </span>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+{% endif %}
+
+<style>
+.snipot-card,
+.snipot-card * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.snipot-card {
+  background: #ffffff;
+  position: relative;
+  padding: 15px;
+}
+
+/* Info Icon */
+.snipot-info-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+/* Image */
+.snipot-image {
+  position: relative;
+}
+
+.snipot-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Badge */
+.snipot-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: green;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+/* Content */
+.snipot-content {
+  margin-top: 10px;
+}
+
+/* Rating */
+.snipot-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.star.filled {
+  color: #FFC107;
+}
+
+.snipot-review-count {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Review Text */
+.snipot-review-text {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Title */
+.snipot-title {
+  margin-top: 8px;
+}
+
+.snipot-title a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pricing */
+.snipot-pricing {
+  margin-top: 6px;
+}
+
+.snipot-price {
+  color: red;
+  font-weight: 600;
+}
+
+.snipot-compare {
+  color: red;
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+</style>
