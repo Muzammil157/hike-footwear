@@ -111,6 +111,15 @@
         "padding_vertical_mobile": 30
       }
     },
+    "custom_feature_colllection_rTtVLb": {
+      "type": "custom-feature-colllection",
+      "name": "Custom Featured",
+      "settings": {
+        "collection": "hydrogen",
+        "button_text": "View All",
+        "products_to_show": 4
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -394,6 +403,7 @@
   "order": [
     "shokutwa_lagoon_hero_DPrwiL",
     "nsh_logo_slider_MwTn7t",
+    "custom_feature_colllection_rTtVLb",
     "featured_collection",
     "nsh_video_content_BQX4D6",
     "nsh_two_image_split_cJeqBf",
