@@ -1,15 +1,15 @@
 {% assign current_product = product %}
 
 {% if current_product != blank %}
-<div class="snipot-card">
+<div class="snippet-card">
 
   <!-- Info Icon -->
-  <a href="{{ current_product.url }}" class="snipot-info-icon">
+  <a href="{{ current_product.url }}" class="snippet-info-icon">
     i
   </a>
 
   <!-- Product Image -->
-  <div class="snipot-image">
+  <div class="snippet-image">
     <a href="{{ current_product.url }}">
       <img 
         src="{{ current_product.featured_image | image_url: width: 600 }}" 
@@ -22,49 +22,49 @@
     {% if current_product.compare_at_price > current_product.price %}
       {% assign discount = current_product.compare_at_price | minus: current_product.price %}
       {% assign discount_percent = discount | times: 100 | divided_by: current_product.compare_at_price %}
-      <div class="snipot-badge">
+      <div class="snippet-badge">
         -{{ discount_percent }}%
       </div>
     {% endif %}
   </div>
 
   <!-- Content -->
-  <div class="snipot-content">
+  <div class="snippet-content">
 
     <!-- Rating -->
-    <div class="snipot-rating">
-      <div class="snipot-stars">
+    <div class="snippet-rating">
+      <div class="snippet-stars">
         {% assign rating_value = 4 %}
         {% for i in (1..5) %}
           <span class="star {% if i <= rating_value %}filled{% endif %}">★</span>
         {% endfor %}
       </div>
 
-      <div class="snipot-review-count">
+      <div class="snippet-review-count">
         {{ rating_value }}/5 ({{ 2000 | minus: 537 }} reviews)
       </div>
     </div>
 
     <!-- Review Text -->
-    <div class="snipot-review-text">
+    <div class="snippet-review-text">
       Excellent product quality
     </div>
 
     <!-- Product Title -->
-    <div class="snipot-title">
+    <div class="snippet-title">
       <a href="{{ current_product.url }}">
         {{ current_product.title }}
       </a>
     </div>
 
     <!-- Pricing -->
-    <div class="snipot-pricing">
-      <span class="snipot-price">
+    <div class="snippet-pricing">
+      <span class="snippet-price">
         {{ current_product.price | money }}
       </span>
 
       {% if current_product.compare_at_price > current_product.price %}
-        <span class="snipot-compare">
+        <span class="snippet-compare">
           {{ current_product.compare_at_price | money }}
         </span>
       {% endif %}
@@ -75,21 +75,21 @@
 {% endif %}
 
 <style>
-.snipot-card,
-.snipot-card * {
+.snippet-card,
+.snippet-card * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.snipot-card {
+.snippet-card {
   background: #ffffff;
   position: relative;
   padding: 15px;
 }
 
 /* Info Icon */
-.snipot-info-icon {
+.snippet-info-icon {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -106,17 +106,17 @@
 }
 
 /* Image */
-.snipot-image {
+.snippet-image {
   position: relative;
 }
 
-.snipot-image img {
+.snippet-image img {
   width: 100%;
   display: block;
 }
 
 /* Badge */
-.snipot-badge {
+.snippet-badge {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -128,12 +128,12 @@
 }
 
 /* Content */
-.snipot-content {
+.snippet-content {
   margin-top: 10px;
 }
 
 /* Rating */
-.snipot-rating {
+.snippet-rating {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -148,23 +148,23 @@
   color: #FFC107;
 }
 
-.snipot-review-count {
+.snippet-review-count {
   font-size: 12px;
   color: #555;
 }
 
 /* Review Text */
-.snipot-review-text {
+.snippet-review-text {
   font-size: 13px;
   margin-top: 5px;
 }
 
 /* Title */
-.snipot-title {
+.snippet-title {
   margin-top: 8px;
 }
 
-.snipot-title a {
+.snippet-title a {
   text-decoration: none;
   color: #000;
   font-weight: 600;
@@ -175,16 +175,16 @@
 }
 
 /* Pricing */
-.snipot-pricing {
+.snippet-pricing {
   margin-top: 6px;
 }
 
-.snipot-price {
+.snippet-price {
   color: red;
   font-weight: 600;
 }
 
-.snipot-compare {
+.snippet-compare {
   color: red;
   text-decoration: line-through;
   margin-left: 6px;
