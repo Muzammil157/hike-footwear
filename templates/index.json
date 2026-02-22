@@ -116,7 +116,7 @@
       "name": "Custom Featured",
       "settings": {
         "collection": "automated-collection",
-        "button_text": "View All",
+        "button_text": "ALLES ANSEHEN",
         "products_to_show": 4
       }
     },
