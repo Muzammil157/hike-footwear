@@ -481,6 +481,19 @@ h6:empty {
   display: none;
 }
 
+.custom-anchor.a {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-family: var(--font-heading-family);
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    margin-top: 8px;
+}
+
 .link,
 .customer a {
   cursor: pointer;
