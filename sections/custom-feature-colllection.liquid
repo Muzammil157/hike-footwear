@@ -1,0 +1,126 @@
+{% schema %}
+{
+  "name": "Custom Featured",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "View All Button Text",
+      "default": "View All"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to Show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Featured"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign selected_collection = section.settings.collection %}
+
+<section class="featured-snippet">
+  <div class="featured-header">
+    
+    <div class="featured-title">
+      {{ selected_collection.title }}
+    </div>
+
+    {% if selected_collection.url != blank %}
+      <a href="{{ selected_collection.url }}" class="featured-button">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+
+  </div>
+
+  <div class="featured-products">
+
+    {% for product in selected_collection.products limit: section.settings.products_to_show %}
+      <div class="featured-product-item">
+        {% render 'product-card-snippet', product: product %}
+      </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<style>
+.featured-snippet,
+.featured-snippet * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.featured-snippet {
+  width: 100%;
+}
+
+/* Header */
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.featured-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Outline Button */
+.featured-button {
+  padding: 8px 18px;
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* Desktop Grid */
+.featured-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+
+  .featured-products {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .featured-products::-webkit-scrollbar {
+    display: none;
+  }
+
+  .featured-product-item {
+    flex: 0 0 70%; /* 1 full + 30% next */
+  }
+
+}
+</style>
