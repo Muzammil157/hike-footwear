@@ -200,6 +200,31 @@
   color: #000;
 }
 
+/* Make cards equal height */
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure images inside testimonial-card fit nicely */
+.testimonial-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* Adjust as needed */
+  object-fit: cover;
+}
+
+/* Optional scrollbar styling */
+.swiper-scrollbar {
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 2px;
+}
+
+.swiper-scrollbar-drag {
+  background: #000;
+  border-radius: 2px;
+}
+
 /* Responsive */
 @media screen and (max-width: 990px) {
   .testimonial-grid {
