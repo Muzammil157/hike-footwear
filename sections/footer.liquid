@@ -27,6 +27,12 @@
   }
 {%- endstyle -%}
 
+<style>
+  .custom-footer-page-width {
+    padding-inline: 27px;
+  }
+</style>
+
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
@@ -49,7 +55,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width">
+      <div class="footer__content-top custom-footer-page-width">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
