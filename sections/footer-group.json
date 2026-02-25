@@ -14,11 +14,10 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "text_Mt8gaB": {
-          "type": "text",
+        "brand_information_pMBDV8": {
+          "type": "brand_information",
           "settings": {
-            "heading": "",
-            "subtext": "<p>Bei <strong>Hike</strong> legen wir Wert auf ein gesünderes Fußklima. Unsere Schuhe unterstützen die natürliche Ausrichtung Ihrer Füße und fördern den täglichen Komfort. Wenn Sie sich für Hike entscheiden, investieren Sie in das langfristige Wohlbefinden Ihrer Füße! 👣</p><p>Unser Kundenservice ist <strong>Montag bis Freitag</strong> erreichbar. Kontaktieren Sie uns unter:</p><p>📧 info@hike-footwear.com</p>"
+            "show_social": true
           }
         },
         "link_list_HzeWUf": {
@@ -44,21 +43,21 @@
         }
       },
       "block_order": [
-        "text_Mt8gaB",
+        "brand_information_pMBDV8",
         "link_list_HzeWUf",
         "link_list_4QJtmx",
         "link_list_tr9exk"
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
+        "show_social": false,
+        "enable_country_selector": false,
         "enable_language_selector": true,
         "payment_enable": true,
-        "show_policy": true,
+        "show_policy": false,
         "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
