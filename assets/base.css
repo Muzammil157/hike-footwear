@@ -486,7 +486,7 @@ h6:empty {
     padding: 12px 24px;
     text-decoration: none;
     font-family: var(--font-heading-family);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
     text-transform: uppercase;
     border-radius: 6px;
