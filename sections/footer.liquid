@@ -102,11 +102,16 @@
 
   .footer-block__newsletter .newsletter-form__field-wrapper .field__input {
     background: #fff;
+    border-radius: 8px;
   }
 
   .footer-block__newsletter .newsletter-form__field-wrapper .field__label {
     color: #5c5c5c;
   }
+  .footer-block__newsletter .newsletter-form__field-wrapper .field:after,
+    .footer-block__newsletter .newsletter-form__field-wrapper .field:before, {
+      border-radius: 8px;
+    }
 </style>
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
