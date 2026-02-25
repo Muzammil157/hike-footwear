@@ -127,8 +127,8 @@
                     </div>
                   {% when 'newsletter' %}
                     <div class="footer-block__newsletter">
-                      <h3>Newsletter</h3>
-                      <p>Erhalten Sie als Erster Zugang zu neuen Produktneuheiten, exklusiven Angeboten und besonderen Gewinnspielen!</p>
+                      <h3>{{ block.settings.newsletter_heading }}</h3>
+                      <p>{{ block.settings.newsletter_text }}</p>
                       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
