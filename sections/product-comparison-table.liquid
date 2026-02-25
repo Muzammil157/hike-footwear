@@ -5,17 +5,17 @@
     <div class="comparison-products-header">
       <div class="comparison-heading-box">
        <!-- Subheading -->
-    {% if section.settings.subheading != blank %}
+      {% if section.settings.subheading != blank %}
       <div class="comparison-subheading">
         {{ section.settings.subheading }}
       </div>
-    {% endif %}
-    {% if section.settings.subtle != blank %}
+      {% endif %}
+      {% if section.settings.subtle != blank %}
       <div class="comparison-subtle">
         {{ section.settings.subtle }}
       </div>
-    {% endif %}
-    </div>
+      {% endif %}
+      </div>
       {% for block in section.blocks %}
         {% if block.type == 'product_column' %}
           <div class="comparison-product-column">
@@ -34,6 +34,37 @@
 
     <!-- Rows -->
     <div class="comparison-rows-wrapper">
+      <div class="comparison-row">
+      <div class="comparison-products-header">
+      <div class="comparison-heading-box">
+       <!-- Subheading -->
+      {% if section.settings.subheading != blank %}
+      <div class="comparison-subheading">
+        {{ section.settings.subheading }}
+      </div>
+      {% endif %}
+      {% if section.settings.subtle != blank %}
+      <div class="comparison-subtle">
+        {{ section.settings.subtle }}
+      </div>
+      {% endif %}
+      </div>
+      {% for block in section.blocks %}
+        {% if block.type == 'product_column' %}
+          <div class="comparison-product-column">
+            {% if block.settings.product_image != blank %}
+              <img src="{{ block.settings.product_image | image_url: width: 300 }}" alt="{{ block.settings.product_title }}" class="product-image">
+            {% endif %}
+            {% if block.settings.product_title != blank %}
+              <div class="product-title">
+                {{ block.settings.product_title }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
       {% for row in section.blocks %}
         {% if row.type == 'row' %}
           <div class="comparison-row">
