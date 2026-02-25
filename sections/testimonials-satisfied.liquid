@@ -206,6 +206,33 @@
 }
 </style>
 
+<script>
+  function initMobileSwiper() {
+    // Destroy existing swiper if screen resized
+    if (window.mobileSwiper) {
+      window.mobileSwiper.destroy(true, true);
+      window.mobileSwiper = undefined;
+    }
+
+    if (window.innerWidth <= 768) {
+      window.mobileSwiper = new Swiper(".testimonial-grid.swiper", {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          draggable: true,
+        },
+      });
+    }
+  }
+
+  // Init on load
+  initMobileSwiper();
+
+  // Reinit on resize
+  window.addEventListener("resize", initMobileSwiper);
+</script>
+
 {% schema %}
 {
   "name": "Satisfied Testimonials",
