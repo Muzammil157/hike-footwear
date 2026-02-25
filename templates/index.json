@@ -226,7 +226,6 @@
       "name": "Simple Collection List",
       "settings": {
         "heading": "Shop By Collection",
-        "image_height": 250,
         "grid_gap": 10,
         "image_radius": 10,
         "padding_vertical": 45
@@ -303,7 +302,6 @@
       "name": "Rating Cards Row",
       "settings": {
         "heading": "Wir verbessern das Leben von über 1.450.000 Menschen durch den Fokus auf Fußgesundheit mit HIKE Footwear!",
-        "heading_max_width": 600,
         "card_radius": 6
       }
     },
@@ -315,7 +313,7 @@
         "overlay_color": "#000000",
         "overlay_opacity": 0.4,
         "content_alignment": "left",
-        "heading": "Wir setzen auf ein gesünderes Fußklima",
+        "heading": "Wir setzen auf ein<br> gesünderes Fußklima",
         "heading_color": "#ffffff",
         "text": "",
         "text_color": "#ffffff",
