@@ -200,7 +200,7 @@
   display: flex;
   flex-direction: column;
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  {% comment %} border-bottom: 1px solid #ccc; {% endcomment %}
 }
 
 .comparison-row {
@@ -257,7 +257,7 @@
 
 /* Mobile */
 @media screen and (max-width: 749px) {
-  .comparison-rows-wrapper .comparison-row:first-child {
+  .comparison-rows-wrapper {
     border-top: none;
   }
   .sm-hide-comparison {
