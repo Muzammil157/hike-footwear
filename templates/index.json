@@ -338,15 +338,17 @@
         "product_column_L3PCak": {
           "type": "product_column",
           "settings": {
-            "product_title": "",
-            "product_link": ""
+            "product_image": "shopify://shop_images/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg",
+            "product_title": "Test",
+            "product_link": "#"
           }
         },
         "product_column_twDaLx": {
           "type": "product_column",
           "settings": {
-            "product_title": "",
-            "product_link": ""
+            "product_image": "shopify://shop_images/snowboard_purple_hydrogen.png",
+            "product_title": "test 2",
+            "product_link": "#"
           }
         },
         "row_8zxzR8": {
