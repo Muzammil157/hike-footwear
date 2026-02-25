@@ -34,7 +34,7 @@
 
     <!-- Rows -->
     <div class="comparison-rows-wrapper">
-      <div class="comparison-row">
+      <div class="comparison-row lg-hide-row">
       <div class="comparison-products-header lg-hide-comparison">
       <div class="comparison-heading-box">
        <!-- Subheading -->
@@ -267,8 +267,15 @@
   font-weight: 600;
 }
 
+.lg-hide-row {
+  display: none;
+}
+
 /* Mobile */
 @media screen and (max-width: 749px) {
+  .lg-hide-row {
+    display: flex;
+  }
   .comparison-rows-wrapper {
     border-top: none;
   }
