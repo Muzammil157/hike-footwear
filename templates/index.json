@@ -354,8 +354,44 @@
         "row_8zxzR8": {
           "type": "row",
           "settings": {
-            "row_heading": "Comfort",
+            "row_heading": "Gehkomfort",
             "product_1_bars": 5,
+            "product_2_bars": 5,
+            "product_3_bars": 5
+          }
+        },
+        "row_HnG8tP": {
+          "type": "row",
+          "settings": {
+            "row_heading": "Outdoor-Abenteuer",
+            "product_1_bars": 3,
+            "product_2_bars": 4,
+            "product_3_bars": 5
+          }
+        },
+        "row_bdWxxN": {
+          "type": "row",
+          "settings": {
+            "row_heading": "Sportliche Aktivitäten",
+            "product_1_bars": 3,
+            "product_2_bars": 4,
+            "product_3_bars": 4
+          }
+        },
+        "row_bRbQBP": {
+          "type": "row",
+          "settings": {
+            "row_heading": "Für den Alltag",
+            "product_1_bars": 5,
+            "product_2_bars": 5,
+            "product_3_bars": 5
+          }
+        },
+        "row_qV9Uia": {
+          "type": "row",
+          "settings": {
+            "row_heading": "Wetterbeständigkeit",
+            "product_1_bars": 3,
             "product_2_bars": 3,
             "product_3_bars": 4
           }
@@ -365,7 +401,11 @@
         "product_column_PCr3er",
         "product_column_L3PCak",
         "product_column_twDaLx",
-        "row_8zxzR8"
+        "row_8zxzR8",
+        "row_HnG8tP",
+        "row_bdWxxN",
+        "row_bRbQBP",
+        "row_qV9Uia"
       ],
       "name": "Product Comparison Table",
       "settings": {
