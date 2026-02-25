@@ -227,9 +227,9 @@
       "settings": {
         "heading": "Shop By Collection",
         "image_height": 250,
-        "grid_gap": 30,
+        "grid_gap": 10,
         "image_radius": 10,
-        "padding_vertical": 80
+        "padding_vertical": 45
       }
     },
     "testimonials_satisfied_QPGJTy": {
