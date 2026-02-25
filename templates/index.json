@@ -173,7 +173,7 @@
         "autoplay": true,
         "loop": true,
         "show_controls": false,
-        "icon_size": 40,
+        "icon_size": 80,
         "border_radius": 12,
         "padding_vertical": 45,
         "padding_vertical_mobile": 50
