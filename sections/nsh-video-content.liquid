@@ -102,6 +102,8 @@ NSH Video + Content Section
 
 .nsh-video-container {
   aspect-ratio: 1;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .nsh-video-container video {
@@ -112,8 +114,9 @@ NSH Video + Content Section
 .nsh-video-container video,
 .nsh-video-container iframe {
   width: 100%;
-  height: auto;
-  border-radius: {{ section.settings.border_radius }}px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .nsh-video-col.nsh-content {
