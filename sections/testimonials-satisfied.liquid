@@ -209,30 +209,25 @@
 </style>
 
 <script>
-  function initMobileSwiper() {
-    // Destroy existing swiper if screen resized
-    if (window.mobileSwiper) {
-      window.mobileSwiper.destroy(true, true);
-      window.mobileSwiper = undefined;
-    }
-
-    if (window.innerWidth <= 768) {
-      window.mobileSwiper = new Swiper(".testimonial-grid.swiper", {
-        slidesPerView: 1,
+  const testimonialSwiper = new Swiper(".testimonial-grid.swiper", {
+    slidesPerView: 3,      // Default: desktop
+    spaceBetween: 20,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+    },
+    breakpoints: {
+      // when window width is <= 768px
+      0: {
+        slidesPerView: 1,  // mobile: 1 slide
         spaceBetween: 15,
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          draggable: true,
-        },
-      });
-    }
-  }
-
-  // Init on load
-  initMobileSwiper();
-
-  // Reinit on resize
-  window.addEventListener("resize", initMobileSwiper);
+      },
+      769: {
+        slidesPerView: 3,  // desktop: 3 slides
+        spaceBetween: 20,
+      },
+    },
+  });
 </script>
 
 {% schema %}
