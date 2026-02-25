@@ -79,7 +79,7 @@
     <div class="comparison-product-links">
       {% for block in section.blocks %}
         {% if block.type == 'product_column' %}
-          <div class="product-link">
+          <div class="product-link" style="grid-column-start: {{ forloop.index | plus:1 }}">
             {% if block.settings.product_link != blank %}
               <a href="{{ block.settings.product_link }}">Learn More</a>
             {% endif %}
@@ -199,7 +199,8 @@
 
 /* Product Links */
 .comparison-product-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   margin-top: 20px;
 }
