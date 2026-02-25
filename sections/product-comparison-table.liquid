@@ -104,6 +104,17 @@
           </div>
         {% endif %}
       {% endfor %}
+       <div class="comparison-product-links">
+      {% for block in section.blocks %}
+        {% if block.type == 'product_column' %}
+          <div class="product-link" style="grid-column-start: {{ forloop.index | plus:1 }}">
+            {% if block.settings.product_link != blank %}
+              <a href="{{ block.settings.product_link }}">Learn More</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
     </div>
 
     <!-- Product Links -->
