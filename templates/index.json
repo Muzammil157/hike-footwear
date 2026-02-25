@@ -367,7 +367,8 @@
       ],
       "name": "Product Comparison Table",
       "settings": {
-        "subheading": "Finden Sie Ihre perfekte Passform"
+        "subheading": "Finden Sie Ihre perfekte Passform",
+        "subtle": "Entdecken Sie, welche Barfußschuhe am besten zu Ihnen passen."
       }
     }
   },
