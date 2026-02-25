@@ -40,14 +40,16 @@
         {% endfor %}
       </div>
 
+       <!-- Review Text -->
+    {% if current_product.type != blank %}
+    <div class="snippet-review-text">
+      {{ current_product.type }}
+    </div>
+  {% endif %}
+  
       <div class="snippet-review-count">
         {{ rating_value }}/5 ({{ 2000 | minus: 537 }} reviews)
       </div>
-    </div>
-
-    <!-- Review Text -->
-    <div class="snippet-review-text">
-      {{ current_product.type }}
     </div>
 
     <!-- Product Title -->
