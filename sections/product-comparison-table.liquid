@@ -1,15 +1,14 @@
 <section class="comparison-table-section">
   <div class="comparison-container">
 
-    <!-- Subheading -->
+    <!-- Product Header Images -->
+    <div class="comparison-products-header">
+       <!-- Subheading -->
     {% if section.settings.subheading != blank %}
       <div class="comparison-subheading">
         {{ section.settings.subheading }}
       </div>
     {% endif %}
-
-    <!-- Product Header Images -->
-    <div class="comparison-products-header">
       {% for block in section.blocks %}
         {% if block.type == 'product_column' %}
           <div class="comparison-product-column">
