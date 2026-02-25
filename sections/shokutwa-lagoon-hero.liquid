@@ -233,6 +233,12 @@
             alt="Hero Banner"
           >
         {% endif %}
+        {% if section.settings.banner_mobile_image != blank %}
+          <img 
+            src="{{ section.settings.banner_mobile_image | image_url }}" 
+            alt="Hero Banner"
+          >
+        {% endif %}
       </div>
 
     </div>
