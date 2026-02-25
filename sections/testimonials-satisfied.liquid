@@ -286,7 +286,7 @@
   }
 
   .lg-hide-cards {
-    display: grid;  
+    display: flex;  
   }
 }
 </style>
@@ -300,7 +300,7 @@
     }
 
     if (window.innerWidth <= 768) {
-      window.mobileSwiper = new Swiper(".testimonial-grid.swiper", {
+      window.mobileSwiper = new Swiper(".testimonial-grid.lg-hide-cards.swiper", {
         slidesPerView: 1,
         spaceBetween: 15,
         scrollbar: {
