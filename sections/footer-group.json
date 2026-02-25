@@ -20,6 +20,10 @@
             "show_social": true
           }
         },
+        "newsletter_dfbiBe": {
+          "type": "newsletter",
+          "settings": {}
+        },
         "link_list_HzeWUf": {
           "type": "link_list",
           "settings": {
@@ -44,6 +48,7 @@
       },
       "block_order": [
         "brand_information_pMBDV8",
+        "newsletter_dfbiBe",
         "link_list_HzeWUf",
         "link_list_4QJtmx",
         "link_list_tr9exk"
