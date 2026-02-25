@@ -22,7 +22,10 @@
         },
         "newsletter_dfbiBe": {
           "type": "newsletter",
-          "settings": {}
+          "settings": {
+            "newsletter_heading": "Newsletter",
+            "newsletter_text": "Erhalten Sie als Erster Zugang zu neuen Produktneuheiten, exklusiven Angeboten und besonderen Gewinnspielen!"
+          }
         },
         "link_list_HzeWUf": {
           "type": "link_list",
