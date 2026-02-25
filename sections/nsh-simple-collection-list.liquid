@@ -3,7 +3,6 @@ NSH Simple Collection List
 {% endcomment %}
 
 <section class="nsh-collection-list">
-  <div class="page-width">
 
     {% if section.settings.heading != blank %}
       <h2 class="nsh-collection-heading">
@@ -45,14 +44,13 @@ NSH Simple Collection List
           </div>
         {% endif %}
       {% endfor %}
-    </div>
 
   </div>
 </section>
 
 <style>
 .nsh-collection-list {
-  padding: {{ section.settings.padding_vertical }}px 0;
+  padding: {{ section.settings.padding_vertical }}px 45px;
 }
 
 .nsh-collection-heading {
