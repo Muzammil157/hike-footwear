@@ -107,16 +107,17 @@ NSH Simple Collection List
 }
 
 /* Tablet */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .nsh-collection-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-/* Mobile */
-@media screen and (max-width: 600px) {
-  .nsh-collection-grid {
-    grid-template-columns: 1fr;
+  .nsh-collection-list {
+    padding: 24px 12px;
+  }
+
+  .nsh-collection-heading {
+    padding-inline: 16px;
   }
 
   .nsh-collection-heading {
