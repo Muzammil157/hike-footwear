@@ -104,7 +104,7 @@
           </div>
         {% endif %}
       {% endfor %}
-       <div class="comparison-product-links">
+       <div class="comparison-product-links lg-hide-comparison">
       {% for block in section.blocks %}
         {% if block.type == 'product_column' %}
           <div class="product-link" style="grid-column-start: {{ forloop.index | plus:1 }}">
@@ -118,7 +118,7 @@
     </div>
 
     <!-- Product Links -->
-    <div class="comparison-product-links">
+    <div class="comparison-product-links sm-hide-comparison">
       {% for block in section.blocks %}
         {% if block.type == 'product_column' %}
           <div class="product-link" style="grid-column-start: {{ forloop.index | plus:1 }}">
