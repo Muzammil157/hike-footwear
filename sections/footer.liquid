@@ -108,8 +108,8 @@
   .footer-block__newsletter .newsletter-form__field-wrapper .field__label {
     color: #5c5c5c;
   }
-  .footer-block__newsletter .newsletter-form__field-wrapper .field:after,
-  .footer-block__newsletter .newsletter-form__field-wrapper .field:before, {
+  .footer-block__newsletter .newsletter-form__field-wrapper .custom-field::after,
+  .footer-block__newsletter .newsletter-form__field-wrapper .custom-field::before, {
       border-radius: 8px !important;
     }
 </style>
@@ -180,7 +180,7 @@
                       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
-                  <div class="field">
+                  <div class="field custom-field">
                     <input
                       id="NewsletterForm--{{ section.id }}"
                       type="email"
