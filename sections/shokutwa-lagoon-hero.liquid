@@ -122,8 +122,23 @@
   /* border-radius: 10px; */
 }
 
+.banner-desktop {
+    display: block;
+  }
+
+  .banner-mobile {
+    display: none;
+  }
+
 /* Mobile */
 @media screen and (max-width: 768px) {
+  .banner-desktop {
+    display: none;
+  }
+
+  .banner-mobile {
+    display: block;
+  }
   .shokutwa-hero__container {
     grid-template-columns: 1fr;
   }
@@ -231,12 +246,14 @@
           <img 
             src="{{ section.settings.banner_image | image_url: width: 1600 }}" 
             alt="Hero Banner"
+            class="banner-desktop"
           >
         {% endif %}
         {% if section.settings.banner_mobile_image != blank %}
           <img 
             src="{{ section.settings.banner_mobile_image | image_url }}" 
             alt="Hero Banner"
+            class="banner-mobile"
           >
         {% endif %}
       </div>
