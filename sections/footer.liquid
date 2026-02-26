@@ -112,6 +112,13 @@
   .footer-block__newsletter .newsletter-form__field-wrapper .custom-field::before, {
       border-radius: 8px !important;
     }
+
+    .footer__content-top .grid {
+      display: grid !important;
+      grid-template-columns: 41rem auto 30rem 30rem !important;
+    }
+
+
 </style>
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -155,7 +162,7 @@
           >
             {%- for block in section.blocks -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{{ block.type }}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
