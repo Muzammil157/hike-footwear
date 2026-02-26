@@ -67,9 +67,19 @@
                     </li>
                   {%- endfor -%}
                 </ul>
+                {% for block in blocks %}
+                  {% if block.type == 'additional-data' %}
+                    {% if block.menu-name == link.title %}
                 <div class="additional-data-menu">
-                  <h1>test</h1>
+                  <a class="additional-url" href="{{ block.data-url }}">
+                  <h2>{{ block.data-heading }}</h2>
+                  <img src="{{ block.data-image | image_url }}">
+                  <p>{{ block.image-text }}</p>
+                  </a>
                 </div>
+              {% endif %}
+              {% endif %}
+            {% endfor %}
               </div>
             </details>
           </header-menu>
