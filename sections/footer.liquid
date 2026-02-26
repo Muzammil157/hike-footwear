@@ -142,6 +142,19 @@
     .footer__content-bottom-wrapper .footer__copyright {
       margin: 0;
     }
+
+    @media screen and (max-width: 768px) {
+      .footer__content-top .grid {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto auto !important;
+      }
+
+      .footer-block.grid__item.brand_information,
+      .footer-block.grid__item.newsletter {
+        grid-column-end: 3;
+        grid-column-start: 1;
+      }
+    }
 </style>
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
