@@ -37,6 +37,21 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "additional_data_aGVGjJ": {
+          "type": "additional-data",
+          "settings": {
+            "menu-name": "Demen",
+            "data-heading": "Hightlights",
+            "data-image": "shopify://shop_images/b368717e4e2d7fdc388605e2b3159943ae8ab0e4-1288x1466_1.webp",
+            "image-text": "image text",
+            "data-url": "shopify://products/selling-plans-ski-wax"
+          }
+        }
+      },
+      "block_order": [
+        "additional_data_aGVGjJ"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
