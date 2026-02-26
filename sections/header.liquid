@@ -185,7 +185,7 @@
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu'
         elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
+          render 'header-mega-menu' , blocks: section.blocks
         endif
       endif
     %}
@@ -652,6 +652,32 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "additional-data",
+      "name": "Additional data",
+      "settings": [
+        {
+          "type": "text",
+          "id": "data-heading",
+          "label": "Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "data-image",
+          "label": "select image"
+        },
+        {
+          "type": "text",
+          "id": "image-text",
+          "label": "Image text"
+        },
+        {
+          "type": "url",
+          "id": "data-url",
+          "label": "Image URL"
+        }
+      ]
     }
   ]
 }
