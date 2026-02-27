@@ -20,10 +20,18 @@
             "text": "30 Tage Geld-zurück-Garantie",
             "link": ""
           }
+        },
+        "announcement_6ptNnB": {
+          "type": "announcement",
+          "settings": {
+            "text": "KOSTENLOSER Versand auf alle Bestellungen!",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_6ptNnB"
       ],
       "settings": {
         "auto_rotate": false,
