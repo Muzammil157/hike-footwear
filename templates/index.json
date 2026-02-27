@@ -108,8 +108,8 @@
         "logo_width_mobile": 100,
         "logo_gap": 40,
         "speed": 20,
-        "padding_vertical": 40,
-        "padding_vertical_mobile": 30
+        "padding_vertical": 15,
+        "padding_vertical_mobile": 20
       }
     },
     "custom_feature_colllection_rTtVLb": {
