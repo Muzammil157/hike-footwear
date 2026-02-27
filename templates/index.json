@@ -103,7 +103,7 @@
       ],
       "name": "NSH Logo Slider",
       "settings": {
-        "bg_color": "#f8f8f8",
+        "bg_color": "#eaeee3",
         "logo_width": 140,
         "logo_width_mobile": 100,
         "logo_gap": 40,
