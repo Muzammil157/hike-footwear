@@ -21,7 +21,7 @@
 -%}
 
 {%- for value in option.values -%}
- {% assign image_url_new = value.swatch %}
+ {% assign image_url_new = value.swatch.image | image_url: width: 50 %}
   {%- liquid
     assign swatch_focal_point = null
     if value.swatch.image
