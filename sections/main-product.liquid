@@ -189,10 +189,6 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
-                <div class="mb-custom-icon-text">
-                  <span class="mb-custom-icon">⭐</span>
-                  <span class="mb-custom-text">Example Text</span>
-                </div>
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -244,6 +240,13 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
+              {% when 'text-icon' %}
+                <div class="mb-custom-icon-text">
+                  <span class="mb-custom-icon">
+                    <img src="{{ block.settings.custom-icon-img | image_url }}" width="100" height="auto">
+                  </span>
+                  <span class="mb-custom-text">{{ block.settings.custom-icon-text }}</span>
+                </div>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
@@ -799,6 +802,22 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "text-icon",
+      "name": "Text icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "custom-icon-img",
+          "label": "Select Icon"
+        },
+        {
+          "type": "text",
+          "id": "custom-icon-text",
+          "label": "Add text"
+        }
+      ]
     },
     {
       "type": "text",
