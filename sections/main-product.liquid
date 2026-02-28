@@ -99,6 +99,35 @@
       line-height: 26px;
       color: #000;
     }
+
+    .mb-custom-carousel {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .mb-custom-carousel-track {
+      display: flex;
+      gap: 12px;
+      width: max-content;
+      animation: mb-custom-slide 20s linear infinite;
+    }
+
+    .mb-custom-slide {
+      width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    @keyframes mb-custom-slide {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
   </style>
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -749,6 +778,15 @@
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}
           </a>
+          <div class="mb-custom-carousel">
+          <div class="mb-custom-carousel-track">
+            <img src="https://picsum.photos/300/200?1" class="mb-custom-slide">
+            <img src="https://picsum.photos/300/200?2" class="mb-custom-slide">
+            <img src="https://picsum.photos/300/200?3" class="mb-custom-slide">
+            <img src="https://picsum.photos/300/200?4" class="mb-custom-slide">
+            <img src="https://picsum.photos/300/200?5" class="mb-custom-slide">
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -806,6 +844,11 @@
     </script>
   </div>
 </product-info>
+
+<script>
+const track = document.querySelector('.mb-custom-carousel-track');
+track.innerHTML += track.innerHTML;
+</script>
 
 {% schema %}
 {
