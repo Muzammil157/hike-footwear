@@ -39,6 +39,12 @@
     }
   {%- endstyle -%}
 
+  <style>
+    .custom-page-width {
+      padding-inline: 27px;
+    }
+  </style>
+
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
