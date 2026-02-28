@@ -70,6 +70,21 @@
     #price-{{ section.id }} {
       margin: 0;
     }
+
+    .mb-custom-icon-text {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      gap: 6px;
+    }
+
+    .mb-custom-icon {
+      font-size: 18px;
+    }
+
+    .mb-custom-text {
+      font-size: 14px;
+    }
   </style>
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -172,6 +187,10 @@
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                     {{ form | payment_terms }}
                   {%- endform -%}
+                </div>
+                <div class="mb-custom-icon-text">
+                  <span class="mb-custom-icon">⭐</span>
+                  <span class="mb-custom-text">Example Text</span>
                 </div>
               {%- when 'inventory' -%}
                 <p
