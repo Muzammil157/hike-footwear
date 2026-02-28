@@ -27,6 +27,27 @@
           "type": "price",
           "settings": {}
         },
+        "text_icon_NGQaFK": {
+          "type": "text-icon",
+          "settings": {
+            "custom-icon-img": "shopify://shop_images/19403538203c6c081452ad5aca768cc2e0529e47-250x254.webp",
+            "custom-icon-text": "Relieves pressure on feet and joints"
+          }
+        },
+        "text_icon_6ccXcQ": {
+          "type": "text-icon",
+          "settings": {
+            "custom-icon-img": "shopify://shop_images/19403538203c6c081452ad5aca768cc2e0529e47-250x254.webp",
+            "custom-icon-text": "Developed with podiatrists"
+          }
+        },
+        "text_icon_NibfAY": {
+          "type": "text-icon",
+          "settings": {
+            "custom-icon-img": "shopify://shop_images/0715b1253d179a1411cf0d385761f0534b56512d-686x390.webp",
+            "custom-icon-text": "Free shipping"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -60,6 +81,9 @@
         "vendor",
         "title",
         "price",
+        "text_icon_NGQaFK",
+        "text_icon_6ccXcQ",
+        "text_icon_NibfAY",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
