@@ -21,7 +21,6 @@
 -%}
 
 {%- for value in option.values -%}
- {% assign image_url_new = value.swatch.image | image_url: width: 50 %}
   {%- liquid
     assign swatch_focal_point = null
     if value.swatch.image
@@ -95,7 +94,7 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}" style="background-image: url('{{ value.image }}')">
+    <label for="{{ input_id }}">
       {{ value -}}
       {{ label_unavailable }}
     </label>
