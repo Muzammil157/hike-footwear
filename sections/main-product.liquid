@@ -129,6 +129,59 @@
       margin-bottom: 16px;
     }
 
+    .mb-custom-size-chart-btn{
+  background:none;
+  border:none;
+  padding:0;
+  font-size:14px;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.mb-custom-size-chart-drawer{
+  position:fixed;
+  top:0;
+  right:0;
+  width:420px;
+  max-width:90%;
+  height:100%;
+  background:white;
+  transform:translateX(100%);
+  transition:transform .35s ease;
+  z-index:9999;
+  overflow-y:auto;
+  padding:24px;
+}
+
+.mb-custom-size-chart-drawer.active{
+  transform:translateX(0);
+}
+
+.mb-custom-size-chart-header{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.mb-custom-size-chart-close{
+  font-size:22px;
+  border:none;
+  background:none;
+  cursor:pointer;
+}
+
+.mb-custom-size-chart-content{
+  margin-top:20px;
+}
+
+.mb-custom-size-chart-text{
+  margin-bottom:20px;
+}
+
+.mb-custom-size-chart-image img{
+  width:100%;
+  border-radius:8px;
+}
+
     @keyframes mb-custom-slide {
       from {
         transform: translateX(0);
