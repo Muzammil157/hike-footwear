@@ -105,6 +105,9 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "mb_custom_enable_size_chart": true,
+        "mb_custom_size_chart_text": "<h2>Größen- und Passformtabelle</h2><p>Um die perfekte Passform zu finden, beachten Sie bitte die folgenden Hinweise. Wir bieten Größen in folgenden Kategorien an:<strong>US</strong>, <strong>EU</strong>, Und <strong>UK</strong>Messungen.</p><p><br/><strong>Wichtig (EU-Kunden):</strong>Unsere Schuhe werden in US-Größen gefertigt. Bitte orientieren Sie sich an der Größentabelle und wählen Sie Ihre Größe anhand der entsprechenden US-Größe aus.</p>",
+        "mb_custom_size_chart_image": "shopify://shop_images/902bcd093a7d6171807e704a74ca38d8152a12e4-1500x800.webp",
         "color_scheme": "scheme-1",
         "media_size": "large",
         "constrain_to_viewport": true,
