@@ -937,6 +937,28 @@ const track = document.querySelector('.mb-custom-carousel-track');
 track.innerHTML += track.innerHTML;
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+
+  const drawer = document.getElementById("mbCustomSizeChart");
+  const openBtn = document.getElementById("mbCustomSizeChartOpen");
+  const closeBtn = document.getElementById("mbCustomSizeChartClose");
+
+  if(openBtn){
+    openBtn.addEventListener("click", () => {
+      drawer.classList.add("active");
+    });
+  }
+
+  if(closeBtn){
+    closeBtn.addEventListener("click", () => {
+      drawer.classList.remove("active");
+    });
+  }
+
+});
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
