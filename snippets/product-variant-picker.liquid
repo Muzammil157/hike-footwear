@@ -44,7 +44,7 @@
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill test">
-          {% if section.settings.mb_custom_enable_size_chart %}
+          {% if section.settings.mb_custom_enable_size_chart and option.name == 'Size' %}
 <div class="size-chart-head">
 <legend class="form__label">{{ option.name }}</legend>
   <button class="mb-custom-size-chart-btn" id="mbCustomSizeChartOpen">
