@@ -171,26 +171,10 @@
             "title": "Atmungsaktives Material",
             "content": "<p>Gönnen Sie Ihren Füßen Luft und entlasten Sie Ihre Gelenke. Dies ist entscheidend, um Reizungen und Beschwerden bei Erkrankungen wie Neuropathie und Arthritis zu lindern.</p>"
           }
-        },
-        "faq_6jzxJW": {
-          "type": "faq",
-          "settings": {
-            "title": "",
-            "content": ""
-          }
-        },
-        "faq_4Yyq8j": {
-          "type": "faq",
-          "settings": {
-            "title": "",
-            "content": ""
-          }
         }
       },
       "block_order": [
-        "faq_YeyVCN",
-        "faq_6jzxJW",
-        "faq_4Yyq8j"
+        "faq_YeyVCN"
       ],
       "name": "Media FAQ",
       "settings": {
