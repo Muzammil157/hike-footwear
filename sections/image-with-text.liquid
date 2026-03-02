@@ -14,6 +14,12 @@
   }
 {%- endstyle -%}
 
+<style>
+  #shopify-section-{{ section.id }} {
+    background: #F9FAF8 !important;
+  }
+</style>
+
 {%- liquid
   assign fetch_priority = 'auto'
   if section.index == 1
