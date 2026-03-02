@@ -1,3 +1,32 @@
+<div class="mb-custom-size-chart-drawer" id="mbCustomSizeChart">
+  
+  <div class="mb-custom-size-chart-header">
+    <button class="mb-custom-size-chart-close" id="mbCustomSizeChartClose">
+      ✕
+    </button>
+  </div>
+
+  <div class="mb-custom-size-chart-content">
+    
+    {% if section.settings.mb_custom_size_chart_text %}
+      <div class="mb-custom-size-chart-text">
+        {{ section.settings.mb_custom_size_chart_text }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.mb_custom_size_chart_image %}
+      <div class="mb-custom-size-chart-image">
+        <img
+          src="{{ section.settings.mb_custom_size_chart_image | image_url }}"
+          alt="Size Chart"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
