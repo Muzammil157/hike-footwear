@@ -1,63 +1,63 @@
-<section class="mb-custom-metrics">
-  <div class="mb-custom-container">
+<section id="shopify-section-{{ section.id }}" class="met-metrics">
+  <div class="met-container">
 
     {% if section.settings.subheading != blank %}
-      <p class="mb-custom-subheading">{{ section.settings.subheading }}</p>
+      <p class="met-subheading">{{ section.settings.subheading }}</p>
     {% endif %}
 
     {% if section.settings.heading != blank %}
-      <h2 class="mb-custom-heading">{{ section.settings.heading }}</h2>
+      <h2 class="met-heading">{{ section.settings.heading }}</h2>
     {% endif %}
 
-    <div class="mb-custom-grid">
+    <div class="met-grid">
 
       {% for block in section.blocks %}
 
-      <div class="mb-custom-block"
+      <div class="met-block"
            data-percentage="{{ block.settings.percentage }}"
            {{ block.shopify_attributes }}>
 
         {% if block.settings.icon != blank %}
         <img
-          class="mb-custom-icon"
+          class="met-icon"
           src="{{ block.settings.icon | image_url: width: 120 }}"
           loading="lazy"
         >
         {% endif %}
 
-        <p class="mb-custom-block-heading">
+        <p class="met-block-heading">
           {{ block.settings.block_heading }}
         </p>
 
-        <div class="mb-custom-percentage">
-          <span class="mb-custom-count">0</span>%
+        <div class="met-percentage">
+          <span class="met-count">0</span>%
         </div>
 
-        <p class="mb-custom-feature">
+        <p class="met-feature">
           {{ block.settings.feature }}
         </p>
 
-        <div class="mb-custom-bars">
+        <div class="met-bars">
 
-  <div class="mb-custom-bar">
-    <div class="mb-custom-bar-fill bar1"></div>
-  </div>
+          <div class="met-bar">
+            <div class="met-bar-fill bar1"></div>
+          </div>
 
-  <div class="mb-custom-bar">
-    <div class="mb-custom-bar-fill bar2"></div>
-  </div>
+          <div class="met-bar">
+            <div class="met-bar-fill bar2"></div>
+          </div>
 
-  <div class="mb-custom-bar">
-    <div class="mb-custom-bar-fill bar3"></div>
-  </div>
+          <div class="met-bar">
+            <div class="met-bar-fill bar3"></div>
+          </div>
 
-  <div class="mb-custom-bar">
-    <div class="mb-custom-bar-fill bar4"></div>
-  </div>
+          <div class="met-bar">
+            <div class="met-bar-fill bar4"></div>
+          </div>
 
-</div>
+        </div>
 
-        <div class="mb-custom-description">
+        <div class="met-description">
           {{ block.settings.description }}
         </div>
 
@@ -71,67 +71,66 @@
 
 
 <style>
-
-#shopify-section-{{ section.id }} .mb-custom-metrics {
+    #shopify-section-{{ section.id }} .met-metrics {
   padding-inline: 27px;
   text-align: center;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-container {
+#shopify-section-{{ section.id }} .met-container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-subheading {
+#shopify-section-{{ section.id }} .met-subheading {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 8px;
   text-align: center;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-heading {
+#shopify-section-{{ section.id }} .met-heading {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 40px;
   text-align: center;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-grid {
+#shopify-section-{{ section.id }} .met-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   gap: 40px;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-block {
+#shopify-section-{{ section.id }} .met-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-icon {
+#shopify-section-{{ section.id }} .met-icon {
   width: 60px;
   margin-bottom: 10px;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-block-heading {
+#shopify-section-{{ section.id }} .met-block-heading {
   font-weight: 600;
   margin-bottom: 6px;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-percentage {
+#shopify-section-{{ section.id }} .met-percentage {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-feature {
+#shopify-section-{{ section.id }} .met-feature {
   font-size: 14px;
   margin-bottom: 12px;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-bars {
+#shopify-section-{{ section.id }} .met-bars {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 6px;
@@ -140,14 +139,14 @@
   margin-bottom: 10px;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-bar {
+#shopify-section-{{ section.id }} .met-bar {
   height: 8px;
-  background: #e5e5e5;
+  background: #e5e5e5; /* grey for unfilled */
   border-radius: 6px;
   overflow: hidden;
 }
 
-#shopify-section-{{ section.id }} .mb-custom-bar-fill {
+#shopify-section-{{ section.id }} .met-bar-fill {
   height: 100%;
   width: 0%;
   transition: width 0.8s ease;
@@ -157,49 +156,43 @@
 #shopify-section-{{ section.id }} .bar1 {
   background: {{ section.settings.bar_color_1 }};
 }
-
 #shopify-section-{{ section.id }} .bar2 {
   background: {{ section.settings.bar_color_2 }};
 }
-
 #shopify-section-{{ section.id }} .bar3 {
   background: {{ section.settings.bar_color_3 }};
 }
-
 #shopify-section-{{ section.id }} .bar4 {
   background: {{ section.settings.bar_color_4 }};
 }
 
-#shopify-section-{{ section.id }} .mb-custom-description {
+#shopify-section-{{ section.id }} .met-description {
   font-size: 14px;
   color: #555;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  #shopify-section-{{ section.id }} .mb-custom-metrics {
+  #shopify-section-{{ section.id }} .met-metrics {
     padding-inline: 16px;
   }
-  #shopify-section-{{ section.id }} .mb-custom-grid {
+  #shopify-section-{{ section.id }} .met-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 }
-
 </style>
 
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function(){
 
-  const section = document.querySelector(".mb-custom-metrics");
-  const blocks = section.querySelectorAll(".mb-custom-block");
+  const section = document.querySelector("#shopify-section-{{ section.id }}");
+  const blocks = section.querySelectorAll(".met-block");
 
   let animated = false;
 
   function animateMetrics(){
-
     if(animated) return;
 
     const rect = section.getBoundingClientRect();
@@ -211,32 +204,26 @@ document.addEventListener("DOMContentLoaded", function(){
       blocks.forEach(block => {
 
         const percentage = parseInt(block.dataset.percentage);
-        const counter = block.querySelector(".mb-custom-count");
-        const bars = block.querySelectorAll(".mb-custom-bar-fill");
+        const counter = block.querySelector(".met-count");
+        const bars = block.querySelectorAll(".met-bar-fill");
 
+        // Count up numbers
         let current = 0;
-
         const counterInterval = setInterval(()=>{
-
           if(current >= percentage){
             clearInterval(counterInterval);
-          }else{
+          } else {
             current++;
             counter.innerText = current;
           }
-
         },20);
 
-
-        const barPercent = percentage / 4;
-
+        // Fill bars
         bars.forEach((bar,index)=>{
 
           let fill = (percentage - (index*25));
-
           if(fill > 25) fill = 25;
           if(fill < 0) fill = 0;
-
           const width = (fill/25)*100;
 
           setTimeout(()=>{
@@ -248,15 +235,12 @@ document.addEventListener("DOMContentLoaded", function(){
       });
 
     }
-
   }
 
   window.addEventListener("scroll", animateMetrics);
-
   animateMetrics();
 
 });
-
 </script>
 
 
