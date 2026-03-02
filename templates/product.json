@@ -219,6 +219,45 @@
         "media_position": "left"
       }
     },
+    "image_with_text_K7wnFQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cEmV6N": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Kraft beginnt in den Füßen</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_FNXyig": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gesunde Bewegung beginnt im Fundament Ihres Körpers –<em><strong>deine Füße</strong></em>Wenn sich Ihre Füße natürlich bewegen können, werden die dafür verantwortlichen Muskeln<strong>Gleichgewicht</strong>, <strong>Haltung</strong>, Und <strong>Stabilität</strong>Sie werden kräftiger und aktiver, wodurch Verspannungen, Beschwerden und Müdigkeit in Beinen und Unterkörper reduziert werden.</p><p>Die Schuhe von Hike mit natürlicher Bewegungsfreiheit wurden entwickelt, um eine korrekte Fußfunktion zu fördern und Ihrem Körper so zu ermöglichen,<strong>neu ausrichten</strong>, <strong>Resilienz aufbauen</strong>, Und <strong>Unterstützung</strong>Bei jedem Schritt bewegt sich der Fuß neu. Mit der Zeit führt dies zu besserer Beweglichkeit, weniger häufigen Fußproblemen und einem verbesserten allgemeinen Wohlbefinden.</p><p>Schlüpfen Sie in Schuhe, die<strong>stellt wieder her</strong>So, wie sich dein Körper bewegen sollte!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cEmV6N",
+        "text_FNXyig"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/bb2f838bf2d7f5a2954f0a9b9ee8bc332f5108f3-3566x3566.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "mb_custom_feature_metrics_gmX7cP": {
       "type": "mb-custom-feature-metrics",
       "blocks": {
@@ -302,6 +341,7 @@
     "main",
     "image_with_text_qhaMYb",
     "faq_media_YxcyWp",
+    "image_with_text_K7wnFQ",
     "mb_custom_feature_metrics_gmX7cP",
     "related-products"
   ]
