@@ -219,10 +219,11 @@
         "metric_wnGa3g": {
           "type": "metric",
           "settings": {
-            "block_heading": "",
-            "percentage": 80,
-            "feature": "",
-            "description": ""
+            "icon": "shopify://shop_images/1f4a105fffba015f65552c184785e00e57f4309d-600x600.webp",
+            "block_heading": "Null-Absenk-Basis",
+            "percentage": 89,
+            "feature": "AUSGEWOGEN",
+            "description": "<p>Eine flache Plattform ohne Absenkung sorgt für eine optimale Ausrichtung von Füßen, Knien und Hüften und ermöglicht so flüssigere Bewegungsabläufe und langanhaltenden Tragekomfort.</p>"
           }
         }
       },
