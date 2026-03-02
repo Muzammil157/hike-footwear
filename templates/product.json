@@ -128,41 +128,32 @@
         "heading_yKX3fR": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "<strong>Discover Natural Freedom of Movement</strong>",
             "heading_size": "h1"
           }
         },
         "text_83EaJq": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Your feet weren’t designed for stiff, narrow shoes.<br/>They were designed to move—flex, spread, and feel the ground.</p><p><strong>HF-Cloud</strong> restores your natural gait, improve posture, and keep you comfortable from city walks to all-day wear.</p><p><strong>Why thousands switch to barefoot:</strong></p><ul><li>Zero-drop sole for natural posture</li><li>Extra-roomy toe box to reduce foot pain</li><li>Lightweight, flexible design that moves with you</li></ul><p>Walk naturally. Feel stronger. Move freely.</p>",
             "text_style": "body"
-          }
-        },
-        "button_7cgMML": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
       "block_order": [
         "heading_yKX3fR",
-        "text_83EaJq",
-        "button_7cgMML"
+        "text_83EaJq"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/17bce53b6af8c2cc34c383af809ec0983b2682ed-1080x1080.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
