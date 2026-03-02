@@ -171,10 +171,28 @@
             "title": "Atmungsaktives Material",
             "content": "<p>Gönnen Sie Ihren Füßen Luft und entlasten Sie Ihre Gelenke. Dies ist entscheidend, um Reizungen und Beschwerden bei Erkrankungen wie Neuropathie und Arthritis zu lindern.</p>"
           }
+        },
+        "faq_4yDeDm": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/9e07ce3a36f7cd4ef1241169f0171e917580fdaa-1119x1119.webp",
+            "title": "Natürlicher Gang",
+            "content": "<p>Barfußschuhe fördern einen natürlichen Gang und stärken die Muskulatur in Füßen und Beinen, wodurch Körperschmerzen vorgebeugt wird. Dies kommt Menschen mit Plantarfasziitis zugute, da Fußschmerzen gelindert und die Heilung beschleunigt werden.</p>"
+          }
+        },
+        "faq_UWdkVN": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/c3cf599efa676701fcae50f719f814d527831f1b-770x770.webp",
+            "title": "Durchblutung anregen",
+            "content": "<p>Der direkte Bodenkontakt der Füße in Barfußschuhen fördert die Durchblutung in Füßen und Beinen. Dies trägt nicht nur zu einer insgesamt besseren Durchblutung bei und hilft, Müdigkeit zu reduzieren, sondern ist auch entscheidend für die Linderung von Neuropathiesymptomen.</p>"
+          }
         }
       },
       "block_order": [
-        "faq_YeyVCN"
+        "faq_YeyVCN",
+        "faq_4yDeDm",
+        "faq_UWdkVN"
       ],
       "name": "Media FAQ",
       "settings": {
