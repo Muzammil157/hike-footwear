@@ -39,12 +39,23 @@
 
         <div class="mb-custom-bars">
 
-          <div class="mb-custom-bar bar1"></div>
-          <div class="mb-custom-bar bar2"></div>
-          <div class="mb-custom-bar bar3"></div>
-          <div class="mb-custom-bar bar4"></div>
+  <div class="mb-custom-bar">
+    <div class="mb-custom-bar-fill bar1"></div>
+  </div>
 
-        </div>
+  <div class="mb-custom-bar">
+    <div class="mb-custom-bar-fill bar2"></div>
+  </div>
+
+  <div class="mb-custom-bar">
+    <div class="mb-custom-bar-fill bar3"></div>
+  </div>
+
+  <div class="mb-custom-bar">
+    <div class="mb-custom-bar-fill bar4"></div>
+  </div>
+
+</div>
 
         <div class="mb-custom-description">
           {{ block.settings.description }}
@@ -119,8 +130,14 @@
 
 .mb-custom-bar{
   height:8px;
-  width:0%;
+  background:#e5e5e5;
   border-radius:6px;
+  overflow:hidden;
+}
+
+.mb-custom-bar-fill{
+  height:100%;
+  width:0%;
   transition:width .8s ease;
 }
 
@@ -187,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         const percentage = parseInt(block.dataset.percentage);
         const counter = block.querySelector(".mb-custom-count");
-        const bars = block.querySelectorAll(".mb-custom-bar");
+        const bars = block.querySelectorAll(".mb-custom-bar-fill");
 
         let current = 0;
 
