@@ -128,14 +128,14 @@
         "heading_yKX3fR": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Discover Natural Freedom of Movement</strong>",
+            "heading": "<strong>Entdecken Sie natürliche Bewegungsfreiheit</strong>",
             "heading_size": "h1"
           }
         },
         "text_83EaJq": {
           "type": "text",
           "settings": {
-            "text": "<p>Your feet weren’t designed for stiff, narrow shoes.<br/>They were designed to move—flex, spread, and feel the ground.</p><p><strong>HF-Cloud</strong> restores your natural gait, improve posture, and keep you comfortable from city walks to all-day wear.</p><p><strong>Why thousands switch to barefoot:</strong></p><ul><li>Zero-drop sole for natural posture</li><li>Extra-roomy toe box to reduce foot pain</li><li>Lightweight, flexible design that moves with you</li></ul><p>Walk naturally. Feel stronger. Move freely.</p>",
+            "text": "<p>Deine Füße sind nicht für steife, enge Schuhe gemacht.<br/>Sie sind für Bewegung geschaffen – für Flexibilität, Spreizung und das Spüren des Bodens.</p><p><strong>HF-Wolke</strong>Stellt Ihren natürlichen Gang wieder her, verbessert die Körperhaltung und sorgt für Komfort – vom Stadtbummel bis zum ganztägigen Tragen.</p><p><strong>Warum Tausende auf Barfußlaufen umsteigen:</strong></p><ul><li>Sohle ohne Sprengung für eine natürliche Körperhaltung</li><li>Besonders geräumige Zehenbox zur Reduzierung von Fußschmerzen</li><li>Leichtes, flexibles Design, das sich mit Ihnen bewegt</li></ul><p>Gehen Sie natürlich. Fühlen Sie sich stärker. Bewegen Sie sich frei.</p>",
             "text_style": "body"
           }
         }
@@ -155,8 +155,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
       }
