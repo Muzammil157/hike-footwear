@@ -161,6 +161,44 @@
         "padding_bottom": 36
       }
     },
+    "faq_media_YxcyWp": {
+      "type": "faq-media",
+      "blocks": {
+        "faq_YeyVCN": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/045c36cbaf995a7cc7bc599abbd35c879f7e8ccc-1024x1024.webp",
+            "title": "Atmungsaktives Material",
+            "content": "<p>Gönnen Sie Ihren Füßen Luft und entlasten Sie Ihre Gelenke. Dies ist entscheidend, um Reizungen und Beschwerden bei Erkrankungen wie Neuropathie und Arthritis zu lindern.</p>"
+          }
+        },
+        "faq_6jzxJW": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "content": ""
+          }
+        },
+        "faq_4Yyq8j": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_YeyVCN",
+        "faq_6jzxJW",
+        "faq_4Yyq8j"
+      ],
+      "name": "Media FAQ",
+      "settings": {
+        "heading": "Why HF Cloud works?",
+        "video": "https://cdn.shopify.com/videos/c/o/v/3021c753ef7b4e608ab79a25bd808c7c.mp4",
+        "media_position": "left"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -183,6 +221,7 @@
   "order": [
     "main",
     "image_with_text_qhaMYb",
+    "faq_media_YxcyWp",
     "related-products"
   ]
 }
