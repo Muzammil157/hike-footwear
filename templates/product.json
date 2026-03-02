@@ -183,6 +183,63 @@
         "media_position": "left"
       }
     },
+    "mb_custom_feature_metrics_gmX7cP": {
+      "type": "mb-custom-feature-metrics",
+      "blocks": {
+        "metric_pXaJiD": {
+          "type": "metric",
+          "settings": {
+            "icon": "shopify://shop_images/0715b1253d179a1411cf0d385761f0534b56512d-686x390.webp",
+            "block_heading": "test",
+            "percentage": 80,
+            "feature": "test",
+            "description": "<p>additional text</p>"
+          }
+        },
+        "metric_6TbB9V": {
+          "type": "metric",
+          "settings": {
+            "block_heading": "",
+            "percentage": 80,
+            "feature": "",
+            "description": ""
+          }
+        },
+        "metric_TgmGwk": {
+          "type": "metric",
+          "settings": {
+            "block_heading": "",
+            "percentage": 80,
+            "feature": "",
+            "description": ""
+          }
+        },
+        "metric_wnGa3g": {
+          "type": "metric",
+          "settings": {
+            "block_heading": "",
+            "percentage": 80,
+            "feature": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "metric_pXaJiD",
+        "metric_6TbB9V",
+        "metric_TgmGwk",
+        "metric_wnGa3g"
+      ],
+      "name": "Feature Metrics",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "bar_color_1": "#ff7a00",
+        "bar_color_2": "#ffc400",
+        "bar_color_3": "#a24a3a",
+        "bar_color_4": "#1db954"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -206,6 +263,7 @@
     "main",
     "image_with_text_qhaMYb",
     "faq_media_YxcyWp",
+    "mb_custom_feature_metrics_gmX7cP",
     "related-products"
   ]
 }
