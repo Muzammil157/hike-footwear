@@ -189,29 +189,31 @@
         "metric_pXaJiD": {
           "type": "metric",
           "settings": {
-            "icon": "shopify://shop_images/0715b1253d179a1411cf0d385761f0534b56512d-686x390.webp",
-            "block_heading": "test",
-            "percentage": 80,
-            "feature": "test",
-            "description": "<p>additional text</p>"
+            "icon": "shopify://shop_images/9af28bc39f61c3b9759a5374ce3800bcdde7b82f-500x505_1_66362708-82eb-4f55-b841-af332d5499f9.webp",
+            "block_heading": "Breite Zehenbox",
+            "percentage": 94,
+            "feature": "FREER",
+            "description": "<p>Unsere extra breite Zehenbox ermöglicht es Ihren Zehen, sich natürlich auszubreiten, reduziert den Druck und erhöht die Stabilität für ganztägigen Tragekomfort.</p>"
           }
         },
         "metric_6TbB9V": {
           "type": "metric",
           "settings": {
-            "block_heading": "",
-            "percentage": 80,
-            "feature": "",
-            "description": ""
+            "icon": "shopify://shop_images/0ee5d15156628b986712708f8241c327ed679f99-600x600.webp",
+            "block_heading": "Natürliche Ausrichtung",
+            "percentage": 98,
+            "feature": "AUSGERICHTET",
+            "description": "<p>Entwickelt, um die Bewegung beim Barfußlaufen nachzuahmen, die Gelenkbelastung zu reduzieren und dem Körper bei jedem Schritt eine optimale Ausrichtung zu ermöglichen.</p>"
           }
         },
         "metric_TgmGwk": {
           "type": "metric",
           "settings": {
-            "block_heading": "",
-            "percentage": 80,
-            "feature": "",
-            "description": ""
+            "icon": "shopify://shop_images/0ce03dbdc458229872278ddd4689ec4229a2e72d-600x600.webp",
+            "block_heading": "Dünne Sohlen",
+            "percentage": 81,
+            "feature": "FEUERZEUG",
+            "description": "<p>Flexible, minimalistische Sohlen verbessern Gleichgewicht, Stabilität und die natürliche Fußkraft, indem sie die Verbindung zum Boden aufrechterhalten.</p>"
           }
         },
         "metric_wnGa3g": {
