@@ -187,12 +187,30 @@
             "title": "Durchblutung anregen",
             "content": "<p>Der direkte Bodenkontakt der Füße in Barfußschuhen fördert die Durchblutung in Füßen und Beinen. Dies trägt nicht nur zu einer insgesamt besseren Durchblutung bei und hilft, Müdigkeit zu reduzieren, sondern ist auch entscheidend für die Linderung von Neuropathiesymptomen.</p>"
           }
+        },
+        "faq_PDVPWq": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/a11ebfbf6c8a071de52e52b0c600450a45f6b795-2859x2858.webp",
+            "title": "Breite Zehenbox",
+            "content": "<p>Die breite Zehenbox in Kombination mit der Flexibilität von Barfußschuhen ermöglicht es den Zehen, sich frei zu bewegen und zu spreizen, was die Kraft und Flexibilität des Fußes fördert.</p>"
+          }
+        },
+        "faq_WkyW6A": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/78306acc6c2da7379c916a7e5847c94bed4668a7-1830x1830.webp",
+            "title": "Multifunktionale Nutzung",
+            "content": "<p>Dank ihres geringen Gewichts und ihrer Atmungsaktivität sind die HF Cloud Barfußschuhe eine ideale Wahl für den täglichen Gebrauch und bieten Komfort und Unterstützung bei einer Reihe von Fußproblemen.</p>"
+          }
         }
       },
       "block_order": [
         "faq_YeyVCN",
         "faq_4yDeDm",
-        "faq_UWdkVN"
+        "faq_UWdkVN",
+        "faq_PDVPWq",
+        "faq_WkyW6A"
       ],
       "name": "Media FAQ",
       "settings": {
