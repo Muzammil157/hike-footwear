@@ -1,0 +1,262 @@
+{% liquid
+  assign media_position = section.settings.media_position
+%}
+
+<section class="mb-custom-faq-media mb-custom-media-{{ media_position }}">
+  <div class="mb-custom-container">
+
+    <!-- MEDIA -->
+    <div class="mb-custom-media">
+
+      {% if section.settings.video != blank %}
+        <video
+          class="mb-custom-video"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source src="{{ section.settings.video }}" type="video/mp4">
+        </video>
+
+      {% elsif section.settings.image != blank %}
+        <img
+          src="{{ section.settings.image | image_url: width: 900 }}"
+          class="mb-custom-image"
+          loading="lazy"
+        >
+      {% endif %}
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="mb-custom-content">
+
+      {% if section.settings.heading != blank %}
+        <h2 class="mb-custom-heading">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      <div class="mb-custom-accordion">
+
+        {% for block in section.blocks %}
+        <div class="mb-custom-accordion-item" {{ block.shopify_attributes }}>
+
+          <button class="mb-custom-accordion-header">
+
+            <span class="mb-custom-accordion-left">
+              {% if block.settings.icon != blank %}
+                <img
+                  src="{{ block.settings.icon | image_url: width: 40 }}"
+                  class="mb-custom-accordion-icon"
+                >
+              {% endif %}
+
+              <span class="mb-custom-accordion-title">
+                {{ block.settings.title }}
+              </span>
+            </span>
+
+            <span class="mb-custom-plus">+</span>
+
+          </button>
+
+          <div class="mb-custom-accordion-body">
+            {{ block.settings.content }}
+          </div>
+
+        </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+.mb-custom-faq-media{
+  width:100%;
+  padding-inline:27px;
+}
+
+.mb-custom-container{
+  display:flex;
+  gap:60px;
+  align-items:flex-start;
+}
+
+.mb-custom-media{
+  flex:1;
+}
+
+.mb-custom-content{
+  flex:1;
+}
+
+.mb-custom-image,
+.mb-custom-video{
+  width:100%;
+  border-radius:12px;
+  display:block;
+}
+
+.mb-custom-heading{
+  margin-bottom:24px;
+}
+
+.mb-custom-accordion-item{
+  border-bottom:1px solid #e5e5e5;
+}
+
+.mb-custom-accordion-header{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:none;
+  border:none;
+  padding:16px 0;
+  cursor:pointer;
+}
+
+.mb-custom-accordion-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.mb-custom-accordion-icon{
+  width:22px;
+  height:22px;
+}
+
+.mb-custom-plus{
+  font-size:22px;
+}
+
+.mb-custom-accordion-body{
+  display:none;
+  padding-bottom:18px;
+  color:#555;
+}
+
+.mb-custom-accordion-item.active .mb-custom-accordion-body{
+  display:block;
+}
+
+.mb-custom-media-right .mb-custom-media{
+  order:2;
+}
+
+.mb-custom-media-right .mb-custom-content{
+  order:1;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  .mb-custom-faq-media{
+    padding-inline:16px;
+  }
+
+  .mb-custom-container{
+    flex-direction:column;
+    gap:32px;
+  }
+
+}
+
+</style>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function(){
+
+  const items = document.querySelectorAll('.mb-custom-accordion-item');
+
+  items.forEach(item => {
+
+    const header = item.querySelector('.mb-custom-accordion-header');
+
+    header.addEventListener('click', () => {
+
+      item.classList.toggle('active');
+
+    });
+
+  });
+
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "Media FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "video",
+      "label": "Video URL (mp4)"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Media position",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    }
+  ],
+  "blocks":[
+    {
+      "type":"faq",
+      "name":"FAQ",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"icon",
+          "label":"Icon"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Title"
+        },
+        {
+          "type":"richtext",
+          "id":"content",
+          "label":"Content"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Media FAQ",
+      "blocks":[
+        {"type":"faq"},
+        {"type":"faq"},
+        {"type":"faq"}
+      ]
+    }
+  ]
+}
+{% endschema %}
