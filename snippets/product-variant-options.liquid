@@ -98,11 +98,11 @@
 
 {% for variant in product.variants %}
   {% if variant.option1 == value %}
-    {% assign variant_with_image = variant %}
+    {% assign variant_with_image = variant.featured_image %}
     {% break %}
   {% endif %}
 {% endfor %}
-    <label for="{{ input_id }}" test="{{ variant_with_image }}">
+    <label for="{{ input_id }}" style="background-image: url('{{ variant_with_image | image_url }}')" test="{{ variant_with_image | image_url }}">
       {{ value -}}
       {{ label_unavailable }}
     </label>
