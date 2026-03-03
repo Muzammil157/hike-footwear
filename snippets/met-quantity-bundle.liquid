@@ -1,0 +1,217 @@
+{% assign bundle_product = product %}
+
+{% if bundle_product == blank %}
+  {% assign bundle_product = passed_product %}
+{% endif %}
+
+{% if bundle_product == blank %}
+  <p>No product provided to met-quantity-bundle snippet.</p>
+{% else %}
+
+<div class="met-bundle">
+
+  {% comment %}
+    You can control quantities here
+  {% endcomment %}
+
+  {% assign quantities = "1,2,3" | split: "," %}
+
+  {% for qty in quantities %}
+
+  <div class="met-bundle-item"
+       data-quantity="{{ qty }}">
+
+    <!-- Checkbox -->
+    <div class="met-bundle-checkbox">
+      <input type="radio" name="met_bundle_select">
+    </div>
+
+    <!-- Content -->
+    <div class="met-bundle-content">
+
+      <div class="met-bundle-top">
+
+        <div>
+          <h3 class="met-bundle-heading">
+            Buy {{ qty }}
+          </h3>
+
+          <p class="met-bundle-subtext">
+            {% if qty == "1" %}
+              Single item
+            {% else %}
+              Save more when buying {{ qty }}
+            {% endif %}
+          </p>
+        </div>
+
+        <div class="met-bundle-pricing">
+          <span class="met-price">
+            {{ bundle_product.price | times: qty | money }}
+          </span>
+
+          {% if bundle_product.compare_at_price > bundle_product.price %}
+            <span class="met-compare">
+              {{ bundle_product.compare_at_price | times: qty | money }}
+            </span>
+          {% endif %}
+        </div>
+
+        {% if qty != "1" %}
+          <span class="met-sale-badge">
+            SAVE
+          </span>
+        {% endif %}
+
+      </div>
+
+      <!-- Dynamic Option Titles -->
+      <div class="met-option-titles"></div>
+
+      <!-- Dynamic Variant Rows -->
+      <div class="met-variant-rows"></div>
+
+    </div>
+
+  </div>
+
+  {% endfor %}
+
+</div>
+
+<style>
+.met-bundle {
+  margin-top: 30px;
+}
+
+.met-bundle-item {
+  position: relative;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.met-sale-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.met-bundle-checkbox {
+  display: flex;
+  align-items: flex-start;
+}
+
+.met-bundle-content {
+  flex: 1;
+}
+
+.met-bundle-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.met-compare {
+  text-decoration: line-through;
+  margin-left: 8px;
+  color: #777;
+}
+
+.met-option-titles {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.met-variant-row {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.met-row-number {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+select {
+  padding: 6px;
+  width: 100%;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const bundles = document.querySelectorAll(".met-bundle-item");
+  const productOptions = {{ bundle_product.options | json }};
+  const variants = {{ bundle_product.variants | json }};
+
+  bundles.forEach(bundle => {
+
+    bundle.addEventListener("click", function(e){
+
+      if(e.target.tagName === "SELECT") return;
+
+      const quantity = parseInt(bundle.dataset.quantity);
+      const titlesContainer = bundle.querySelector(".met-option-titles");
+      const rowsContainer = bundle.querySelector(".met-variant-rows");
+
+      titlesContainer.innerHTML = "";
+      rowsContainer.innerHTML = "";
+
+      if(quantity > 1){
+
+        titlesContainer.innerHTML = productOptions.join(", ");
+
+        for(let i=1; i<=quantity; i++){
+
+          const row = document.createElement("div");
+          row.classList.add("met-variant-row");
+
+          row.style.gridTemplateColumns =
+            "60px repeat(" + productOptions.length + ", 1fr)";
+
+          const number = document.createElement("div");
+          number.classList.add("met-row-number");
+          number.innerText = "#" + i;
+          row.appendChild(number);
+
+          productOptions.forEach((optionName, index)=>{
+
+            const select = document.createElement("select");
+
+            let uniqueValues = [...new Set(
+              variants.map(v => v.options[index])
+            )];
+
+            uniqueValues.forEach(val=>{
+              const opt = document.createElement("option");
+              opt.value = val;
+              opt.innerText = val;
+              select.appendChild(opt);
+            });
+
+            row.appendChild(select);
+
+          });
+
+          rowsContainer.appendChild(row);
+        }
+      }
+
+    });
+
+  });
+
+});
+</script>
+
+{% endif %}
