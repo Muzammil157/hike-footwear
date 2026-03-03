@@ -988,22 +988,19 @@ track.innerHTML += track.innerHTML;
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function(){
+ document.addEventListener("click", function(e){
+
+  const openBtn = e.target.closest("#mbCustomSizeChartOpen");
+  const closeBtn = e.target.closest("#mbCustomSizeChartClose");
 
   const drawer = document.getElementById("mbCustomSizeChart");
-  const openBtn = document.getElementById("mbCustomSizeChartOpen");
-  const closeBtn = document.getElementById("mbCustomSizeChartClose");
 
-  if(openBtn){
-    openBtn.addEventListener("click", () => {
-      drawer.classList.add("active");
-    });
+  if(openBtn && drawer){
+    drawer.classList.add("active");
   }
 
-  if(closeBtn){
-    closeBtn.addEventListener("click", () => {
-      drawer.classList.remove("active");
-    });
+  if(closeBtn && drawer){
+    drawer.classList.remove("active");
   }
 
 });
