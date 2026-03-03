@@ -103,7 +103,9 @@
   {% endif %}
 {% endfor %}
     <label for="{{ input_id }}" style="background-image: url('{{ variant_with_image | image_url }}')" test="{{ variant_with_image | image_url }}">
+      {% if option.name != 'Color' %}
       {{ value -}}
+      {% endif %}
       {{ label_unavailable }}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
