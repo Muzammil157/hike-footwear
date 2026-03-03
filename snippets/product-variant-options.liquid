@@ -94,7 +94,15 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}">
+      {% assign variant_with_image = null %}
+
+{% for variant in product.variants %}
+  {% if variant.option1 == value %}
+    {% assign variant_with_image = variant %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+    <label for="{{ input_id }}" test="{{ variant_with_image }}">
       {{ value -}}
       {{ label_unavailable }}
     </label>
