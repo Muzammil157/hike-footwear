@@ -103,7 +103,7 @@
       ],
       "name": "NSH Logo Slider",
       "settings": {
-        "bg_color": "#eaeee3",
+        "bg_color": "#f7fafc",
         "logo_width": 140,
         "logo_width_mobile": 100,
         "logo_gap": 40,
@@ -195,7 +195,7 @@
       ],
       "name": "NSH Video + Content",
       "settings": {
-        "bg_color": "#f8faf8",
+        "bg_color": "#f7fafc",
         "heading": "Erleben Sie ultimativen Fußkomfort mit HIKE!",
         "subheading": "Bei Hike Footwear ist unsere Mission persönlich: Wir möchten das Wohlbefinden Ihrer Füße unterstützen und Beschwerden reduzieren. Unsere hochwertigen, stützenden Schuhe fördern eine natürliche Fußausrichtung und ganztägigen Komfort.",
         "video_file": "shopify://files/videos/file_example_MP4_480_1_5MG (2).mp4",
