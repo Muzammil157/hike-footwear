@@ -176,7 +176,7 @@
 }
 {% endstyle %}
 
-<section class="shokutwa-hero">
+<section class="shokutwa-hero color-{{ section.settings.color_scheme }}">
   <div class="custom-page-width">
     <div class="shokutwa-hero__container">
 
@@ -273,6 +273,12 @@
 {
   "name": "Shokutwa Lagoon Hero",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "show_reviews",
