@@ -144,79 +144,9 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
-        "quick_add": "standard",
+        "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_99GBwg": {
-      "type": "featured-product",
-      "blocks": {
-        "text_NjbnFW": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_an7bzM": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_MiHUCt": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_XD6JtU": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_PqYKQh": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_74MTXC": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_NCjixt": {
-          "type": "share",
-          "settings": {
-            "share_label": "Teilen"
-          }
-        }
-      },
-      "block_order": [
-        "text_NjbnFW",
-        "title_an7bzM",
-        "price_MiHUCt",
-        "variant_picker_XD6JtU",
-        "quantity_selector_PqYKQh",
-        "buy_buttons_74MTXC",
-        "share_NCjixt"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "the-multi-managed-snowboard",
-        "color_scheme": "scheme-4",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -519,7 +449,6 @@
     "nsh_logo_slider_MwTn7t",
     "custom_feature_colllection_rTtVLb",
     "featured_collection_88kfEn",
-    "featured_product_99GBwg",
     "nsh_video_content_BQX4D6",
     "nsh_two_image_split_cJeqBf",
     "nsh_simple_collection_list_rHnykV",
