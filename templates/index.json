@@ -253,6 +253,7 @@
         "collection_block_VwAUBV",
         "collection_block_FJ8iKX"
       ],
+      "disabled": true,
       "name": "Simple Collection List",
       "settings": {
         "heading": "Shop By Collection",
