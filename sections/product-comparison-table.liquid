@@ -93,13 +93,13 @@
             {% endif %}
 
             <!-- Product 3 Bars -->
-            {% if row.settings.product_3_bars != blank %}
+            {% comment %} {% if row.settings.product_3_bars != blank %}
               <div class="row-bars">
                 {% for i in (1..5) %}
                   <span class="bar {% if i <= row.settings.product_3_bars %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
-            {% endif %}
+            {% endif %} {% endcomment %}
 
           </div>
         {% endif %}
