@@ -38,6 +38,12 @@
   }
 {%- endstyle -%}
 
+<style>
+  #shopify-section-{{ section.id }} .collection__title {
+    text-align: center;
+  }
+</style>
+
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 
