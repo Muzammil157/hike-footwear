@@ -136,7 +136,7 @@
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "outline",
         "color_scheme": "scheme-4",
         "image_ratio": "portrait",
@@ -144,9 +144,9 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -379,8 +379,7 @@
           "settings": {
             "row_heading": "Gehkomfort",
             "product_1_bars": 5,
-            "product_2_bars": 5,
-            "product_3_bars": 5
+            "product_2_bars": 5
           }
         },
         "row_HnG8tP": {
@@ -388,8 +387,7 @@
           "settings": {
             "row_heading": "Outdoor-Abenteuer",
             "product_1_bars": 3,
-            "product_2_bars": 4,
-            "product_3_bars": 5
+            "product_2_bars": 4
           }
         },
         "row_bdWxxN": {
@@ -397,8 +395,7 @@
           "settings": {
             "row_heading": "Sportliche Aktivitäten",
             "product_1_bars": 3,
-            "product_2_bars": 4,
-            "product_3_bars": 4
+            "product_2_bars": 4
           }
         },
         "row_bRbQBP": {
@@ -406,8 +403,7 @@
           "settings": {
             "row_heading": "Für den Alltag",
             "product_1_bars": 5,
-            "product_2_bars": 5,
-            "product_3_bars": 5
+            "product_2_bars": 5
           }
         },
         "row_qV9Uia": {
@@ -415,8 +411,7 @@
           "settings": {
             "row_heading": "Wetterbeständigkeit",
             "product_1_bars": 3,
-            "product_2_bars": 3,
-            "product_3_bars": 4
+            "product_2_bars": 3
           }
         }
       },
