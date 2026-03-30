@@ -1,0 +1,370 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_icon_NGQaFK": {
+          "type": "text-icon",
+          "settings": {
+            "custom-icon-img": "shopify://shop_images/19403538203c6c081452ad5aca768cc2e0529e47-250x254.webp",
+            "custom-icon-text": "Entlastet Druck auf Füßen und Gelenken"
+          }
+        },
+        "text_icon_6ccXcQ": {
+          "type": "text-icon",
+          "settings": {
+            "custom-icon-img": "shopify://shop_images/19403538203c6c081452ad5aca768cc2e0529e47-250x254.webp",
+            "custom-icon-text": "Entwickelt mit Podologen"
+          }
+        },
+        "text_icon_NibfAY": {
+          "type": "text-icon",
+          "settings": {
+            "custom-icon-img": "shopify://shop_images/0715b1253d179a1411cf0d385761f0534b56512d-686x390.webp",
+            "custom-icon-text": "Kostenloser Versand"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "icon_with_text_QDzYWP": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "heading_1": "Kostenloser Versand",
+            "icon_2": "lock",
+            "heading_2": "30-Tage-Garantie",
+            "icon_3": "leaf",
+            "heading_3": "HSA/FSA"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "text_icon_NGQaFK",
+        "text_icon_6ccXcQ",
+        "text_icon_NibfAY",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share",
+        "icon_with_text_QDzYWP"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "mb_custom_enable_size_chart": true,
+        "mb_custom_size_chart_text": "<h2>Größen- und Passformtabelle</h2><p>Um die perfekte Passform zu finden, beachten Sie bitte die folgenden Hinweise. Wir bieten Größen in folgenden Kategorien an:<strong>US</strong>, <strong>EU</strong>, Und <strong>UK</strong>Messungen.</p><p><br/><strong>Wichtig (EU-Kunden):</strong>Unsere Schuhe werden in US-Größen gefertigt. Bitte orientieren Sie sich an der Größentabelle und wählen Sie Ihre Größe anhand der entsprechenden US-Größe aus.</p>",
+        "mb_custom_size_chart_image": "shopify://shop_images/902bcd093a7d6171807e704a74ca38d8152a12e4-1500x800.webp",
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "image_with_text_qhaMYb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yKX3fR": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Entdecken Sie natürliche Bewegungsfreiheit</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_83EaJq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Deine Füße sind nicht für steife, enge Schuhe gemacht.<br/>Sie sind für Bewegung geschaffen – für Flexibilität, Spreizung und das Spüren des Bodens.</p><p><strong>HF-Wolke</strong>Stellt Ihren natürlichen Gang wieder her, verbessert die Körperhaltung und sorgt für Komfort – vom Stadtbummel bis zum ganztägigen Tragen.</p><p><strong>Warum Tausende auf Barfußlaufen umsteigen:</strong></p><ul><li>Sohle ohne Sprengung für eine natürliche Körperhaltung</li><li>Besonders geräumige Zehenbox zur Reduzierung von Fußschmerzen</li><li>Leichtes, flexibles Design, das sich mit Ihnen bewegt</li></ul><p>Gehen Sie natürlich. Fühlen Sie sich stärker. Bewegen Sie sich frei.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yKX3fR",
+        "text_83EaJq"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/17bce53b6af8c2cc34c383af809ec0983b2682ed-1080x1080.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_media_YxcyWp": {
+      "type": "faq-media",
+      "blocks": {
+        "faq_YeyVCN": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/045c36cbaf995a7cc7bc599abbd35c879f7e8ccc-1024x1024.webp",
+            "title": "Atmungsaktives Material",
+            "content": "<p>Gönnen Sie Ihren Füßen Luft und entlasten Sie Ihre Gelenke. Dies ist entscheidend, um Reizungen und Beschwerden bei Erkrankungen wie Neuropathie und Arthritis zu lindern.</p>"
+          }
+        },
+        "faq_4yDeDm": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/9e07ce3a36f7cd4ef1241169f0171e917580fdaa-1119x1119.webp",
+            "title": "Natürlicher Gang",
+            "content": "<p>Barfußschuhe fördern einen natürlichen Gang und stärken die Muskulatur in Füßen und Beinen, wodurch Körperschmerzen vorgebeugt wird. Dies kommt Menschen mit Plantarfasziitis zugute, da Fußschmerzen gelindert und die Heilung beschleunigt werden.</p>"
+          }
+        },
+        "faq_UWdkVN": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/c3cf599efa676701fcae50f719f814d527831f1b-770x770.webp",
+            "title": "Durchblutung anregen",
+            "content": "<p>Der direkte Bodenkontakt der Füße in Barfußschuhen fördert die Durchblutung in Füßen und Beinen. Dies trägt nicht nur zu einer insgesamt besseren Durchblutung bei und hilft, Müdigkeit zu reduzieren, sondern ist auch entscheidend für die Linderung von Neuropathiesymptomen.</p>"
+          }
+        },
+        "faq_PDVPWq": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/a11ebfbf6c8a071de52e52b0c600450a45f6b795-2859x2858.webp",
+            "title": "Breite Zehenbox",
+            "content": "<p>Die breite Zehenbox in Kombination mit der Flexibilität von Barfußschuhen ermöglicht es den Zehen, sich frei zu bewegen und zu spreizen, was die Kraft und Flexibilität des Fußes fördert.</p>"
+          }
+        },
+        "faq_WkyW6A": {
+          "type": "faq",
+          "settings": {
+            "icon": "shopify://shop_images/78306acc6c2da7379c916a7e5847c94bed4668a7-1830x1830.webp",
+            "title": "Multifunktionale Nutzung",
+            "content": "<p>Dank ihres geringen Gewichts und ihrer Atmungsaktivität sind die HF Cloud Barfußschuhe eine ideale Wahl für den täglichen Gebrauch und bieten Komfort und Unterstützung bei einer Reihe von Fußproblemen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_YeyVCN",
+        "faq_4yDeDm",
+        "faq_UWdkVN",
+        "faq_PDVPWq",
+        "faq_WkyW6A"
+      ],
+      "name": "Media FAQ",
+      "settings": {
+        "heading": "Warum funktioniert HF Cloud?",
+        "video": "https://cdn.shopify.com/videos/c/o/v/3021c753ef7b4e608ab79a25bd808c7c.mp4",
+        "media_position": "left"
+      }
+    },
+    "image_with_text_K7wnFQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cEmV6N": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Kraft beginnt in den Füßen</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_FNXyig": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gesunde Bewegung beginnt im Fundament Ihres Körpers –<em><strong>deine Füße</strong></em>Wenn sich Ihre Füße natürlich bewegen können, werden die dafür verantwortlichen Muskeln<strong>Gleichgewicht</strong>, <strong>Haltung</strong>, Und <strong>Stabilität</strong>Sie werden kräftiger und aktiver, wodurch Verspannungen, Beschwerden und Müdigkeit in Beinen und Unterkörper reduziert werden.</p><p>Die Schuhe von Hike mit natürlicher Bewegungsfreiheit wurden entwickelt, um eine korrekte Fußfunktion zu fördern und Ihrem Körper so zu ermöglichen,<strong>neu ausrichten</strong>, <strong>Resilienz aufbauen</strong>, Und <strong>Unterstützung</strong>Bei jedem Schritt bewegt sich der Fuß neu. Mit der Zeit führt dies zu besserer Beweglichkeit, weniger häufigen Fußproblemen und einem verbesserten allgemeinen Wohlbefinden.</p><p>Schlüpfen Sie in Schuhe, die<strong>stellt wieder her</strong>So, wie sich dein Körper bewegen sollte!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cEmV6N",
+        "text_FNXyig"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/bb2f838bf2d7f5a2954f0a9b9ee8bc332f5108f3-3566x3566.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "mb_custom_feature_metrics_gmX7cP": {
+      "type": "mb-custom-feature-metrics",
+      "blocks": {
+        "metric_pXaJiD": {
+          "type": "metric",
+          "settings": {
+            "icon": "shopify://shop_images/9af28bc39f61c3b9759a5374ce3800bcdde7b82f-500x505_1_66362708-82eb-4f55-b841-af332d5499f9.webp",
+            "block_heading": "Breite Zehenbox",
+            "percentage": 94,
+            "feature": "FREER",
+            "description": "<p>Unsere extra breite Zehenbox ermöglicht es Ihren Zehen, sich natürlich auszubreiten, reduziert den Druck und erhöht die Stabilität für ganztägigen Tragekomfort.</p>"
+          }
+        },
+        "metric_6TbB9V": {
+          "type": "metric",
+          "settings": {
+            "icon": "shopify://shop_images/0ee5d15156628b986712708f8241c327ed679f99-600x600.webp",
+            "block_heading": "Natürliche Ausrichtung",
+            "percentage": 98,
+            "feature": "AUSGERICHTET",
+            "description": "<p>Entwickelt, um die Bewegung beim Barfußlaufen nachzuahmen, die Gelenkbelastung zu reduzieren und dem Körper bei jedem Schritt eine optimale Ausrichtung zu ermöglichen.</p>"
+          }
+        },
+        "metric_TgmGwk": {
+          "type": "metric",
+          "settings": {
+            "icon": "shopify://shop_images/0ce03dbdc458229872278ddd4689ec4229a2e72d-600x600.webp",
+            "block_heading": "Dünne Sohlen",
+            "percentage": 81,
+            "feature": "FEUERZEUG",
+            "description": "<p>Flexible, minimalistische Sohlen verbessern Gleichgewicht, Stabilität und die natürliche Fußkraft, indem sie die Verbindung zum Boden aufrechterhalten.</p>"
+          }
+        },
+        "metric_wnGa3g": {
+          "type": "metric",
+          "settings": {
+            "icon": "shopify://shop_images/1f4a105fffba015f65552c184785e00e57f4309d-600x600.webp",
+            "block_heading": "Null-Absenk-Basis",
+            "percentage": 89,
+            "feature": "AUSGEWOGEN",
+            "description": "<p>Eine flache Plattform ohne Absenkung sorgt für eine optimale Ausrichtung von Füßen, Knien und Hüften und ermöglicht so flüssigere Bewegungsabläufe und langanhaltenden Tragekomfort.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "metric_pXaJiD",
+        "metric_6TbB9V",
+        "metric_TgmGwk",
+        "metric_wnGa3g"
+      ],
+      "name": "Feature Metrics",
+      "settings": {
+        "subheading": "VON PODOLOGEN GETESTET UND EMPFOHLEN",
+        "heading": "Entwickelt für ganztägigen, schmerzfreien Komfort.",
+        "bar_color_1": "#ff7a00",
+        "bar_color_2": "#ffc400",
+        "bar_color_3": "#a24a3a",
+        "bar_color_4": "#1db954"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Die beliebtesten Styles...",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-4",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1773418464e4046727": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_tCHgQt": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_tCHgQt"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_qhaMYb",
+    "faq_media_YxcyWp",
+    "image_with_text_K7wnFQ",
+    "mb_custom_feature_metrics_gmX7cP",
+    "related-products",
+    "1773418464e4046727"
+  ]
+}
