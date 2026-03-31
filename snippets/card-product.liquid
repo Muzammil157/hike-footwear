@@ -287,6 +287,32 @@
               {% endif %}
             {%- endif -%}
           </div>
+          {% if featured-collection-card %}
+           {% if card_product.variants.size > 1 %}
+  <div class="product-variants">
+    {% for variant in card_product.variants %}
+      {% assign color_option_index = 0 %}
+      {% for option in card_product.options %}
+        {% if option == 'Color' %}
+          {% assign color_option_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign color_value = variant.options[color_option_index] %}
+
+      <div class="color-swatch">
+        <img 
+          src="{{ variant.featured_image | image_url: width: 100 }}" 
+          alt="{{ color_value }}"
+          title="{{ color_value }}"
+          width="40"
+          height="40"
+        >
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+          {% endif %}
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
         {% if quick_add == 'standard' %}
