@@ -288,28 +288,33 @@
             {%- endif -%}
           </div>
           {% if feature_collection %}
-           {% if card_product.variants.size > 1 %}
+          {% if card_product.variants.size > 1 %}
   <div class="product-variants">
+
+    {% assign shown_colors = '' %}
+
     {% for variant in card_product.variants %}
-      {% assign color_option_index = 0 %}
-      {% for option in card_product.options %}
-        {% if option == 'Color' %}
-          {% assign color_option_index = forloop.index0 %}
-        {% endif %}
-      {% endfor %}
+      {% assign color = variant.option1 %}
 
-      {% assign color_value = variant.options[color_option_index] %}
+      {% if variant.featured_image != blank %}
+        {% unless shown_colors contains color %}
+          {% assign shown_colors = shown_colors | append: color | append: ',' %}
 
-      <div class="color-swatch">
-        <img 
-          src="{{ variant.featured_image | image_url: width: 100 }}" 
-          alt="{{ color_value }}"
-          title="{{ color_value }}"
-          width="40"
-          height="40"
-        >
-      </div>
+          <div class="color-swatch">
+            <img 
+              src="{{ variant.featured_image | image_url: width: 100 }}"
+              alt="{{ color }}"
+              title="{{ color }}"
+              width="40"
+              height="40"
+            >
+          </div>
+
+        {% endunless %}
+      {% endif %}
+
     {% endfor %}
+
   </div>
 {% endif %}
           {% endif %}
