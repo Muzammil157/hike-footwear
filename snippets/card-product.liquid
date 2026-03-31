@@ -123,6 +123,13 @@
                 {{ card_product.title | escape }}
               </a>
             </h3>
+            {% if feature_collection %}
+            {% if product.metafields.custom['product-highlight'] != blank %}
+              <p class="ma-highlight">
+                {{ product.metafields.custom['product-highlight'] }}
+              </p>
+            {% endif %}
+          {% endif %}
           </div>
           <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
