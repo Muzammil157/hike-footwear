@@ -161,9 +161,9 @@
             </a>
           </h3>
            {% if feature_collection %}
-            {% if card_product.metafields.custom['product-highlight'] != blank %}
+            {% if card_product.metafields.custom.product_highlight != blank %}
               <p class="ma-highlight">
-                {{ card_product.metafields.custom['product-highlight'] }}
+                {{ card_product.metafields.custom.product_highlight }}
               </p>
             {% endif %}
           {% endif %}
