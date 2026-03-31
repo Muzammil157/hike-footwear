@@ -288,9 +288,8 @@
             {%- endif -%}
           </div>
           {% if feature_collection %}
-          {% if card_product.variants.size > 1 %}
+            {% if card_product.variants.size > 1 %}
   <div class="product-variants">
-
     {% assign shown_colors = '' %}
 
     {% for variant in card_product.variants %}
@@ -300,11 +299,13 @@
         {% unless shown_colors contains color %}
           {% assign shown_colors = shown_colors | append: color | append: ',' %}
 
-          <div class="color-swatch">
+          <div 
+            class="color-swatch"
+            data-image="{{ variant.featured_image | image_url: width: 800 }}"
+          >
             <img 
               src="{{ variant.featured_image | image_url: width: 100 }}"
               alt="{{ color }}"
-              title="{{ color }}"
               width="40"
               height="40"
             >
@@ -312,9 +313,7 @@
 
         {% endunless %}
       {% endif %}
-
     {% endfor %}
-
   </div>
 {% endif %}
           {% endif %}
