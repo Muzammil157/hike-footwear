@@ -361,17 +361,17 @@
         "product_column_PCr3er": {
           "type": "product_column",
           "settings": {
-            "product_image": "shopify://shop_images/bb2f838bf2d7f5a2954f0a9b9ee8bc332f5108f3-3566x3566-ezgif.com-avif-to-webp-converter.webp",
-            "product_title": "HF-Cloud Barefoot",
-            "product_link": "#"
+            "product_image": "shopify://shop_images/0.jpg",
+            "product_title": "Caspian Abenteuer – Outdoor- und rutschfeste Barfußschuhe",
+            "product_link": "shopify://products/caspian-abenteuer-outdoor-und-rutschfeste-barfussschuhe"
           }
         },
         "product_column_L3PCak": {
           "type": "product_column",
           "settings": {
-            "product_image": "shopify://shop_images/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg",
-            "product_title": "Test",
-            "product_link": "#"
+            "product_image": "shopify://shop_images/0_31.jpg",
+            "product_title": "Comforto Max – Ultra-dehnbar & weiche Barfußschuhe",
+            "product_link": "shopify://products/comforto-max-ultra-dehnbar-weiche-barfussschuhe"
           }
         },
         "row_8zxzR8": {
