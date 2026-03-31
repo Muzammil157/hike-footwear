@@ -236,6 +236,35 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".product-variants").forEach(function(variantWrapper) {
+
+    const swatches = variantWrapper.querySelectorAll(".color-swatch");
+    const productCard = variantWrapper.closest(".card");
+    const mainImage = productCard.querySelector(".media img");
+
+    swatches.forEach(function(swatch) {
+      swatch.addEventListener("click", function() {
+
+        // Change main image
+        const newImage = this.getAttribute("data-image");
+        mainImage.src = newImage;
+        mainImage.srcset = "";
+
+        // Remove border from all swatches
+        swatches.forEach(s => s.classList.remove("active-swatch"));
+
+        // Add border to selected swatch
+        this.classList.add("active-swatch");
+      });
+    });
+
+  });
+
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
