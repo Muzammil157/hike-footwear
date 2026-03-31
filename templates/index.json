@@ -126,7 +126,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "automated-collection",
+        "collection": "homepage-featured",
         "products_to_show": 2,
         "title": "Featured collection",
         "heading_size": "h1",
