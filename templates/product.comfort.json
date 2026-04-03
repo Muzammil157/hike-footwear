@@ -247,8 +247,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_marafgmarafgmara_1.png",
-        "height": "medium",
+        "image": "shopify://shop_images/0Q5A0241.jpg",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
