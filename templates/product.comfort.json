@@ -242,6 +242,9 @@
         "heading_cEmV6N",
         "text_FNXyig"
       ],
+      "custom_css": [
+        ".image-with-text__media img {object-fit: contain;}"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Gemini_Generated_Image_marafgmarafgmara_1.png",
