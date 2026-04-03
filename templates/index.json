@@ -124,6 +124,9 @@
     },
     "featured_collection_88kfEn": {
       "type": "featured-collection",
+      "custom_css": [
+        ".card__media img {object-fit: contain;}"
+      ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "homepage-featured",
@@ -139,7 +142,7 @@
         "show_view_all": false,
         "view_all_style": "outline",
         "color_scheme": "scheme-4",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
